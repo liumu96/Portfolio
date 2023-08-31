@@ -11,23 +11,23 @@ const projects = [
     description:
       "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
     image: "/work3.jpeg",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+    github: "https://github.com/liumu96",
+    link: "https://github.com/liumu96",
   },
   {
     name: "Fluid Simulation",
     description: "PlatoIO is a to do list app that built using the PERN stack.",
     image: "/work4.jpeg",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    github: "https://github.com/liumu96",
+    link: "https://github.com/liumu96",
   },
   {
     name: "Physics Simulation",
     description:
       "Kator Family Photos is a photos and video digitization service in the LA area.",
     image: "/work2.jpeg",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
+    github: "https://github.com/liumu96",
+    link: "https://github.com/liumu96",
   },
 ];
 
