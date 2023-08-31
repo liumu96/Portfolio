@@ -29,11 +29,11 @@
     "three": "^0.154.0",
     "typescript": "^5.1.6",
     "autoprefixer": "^10.4.15",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "postcss": "^8.4.29"
   },
   "devDependencies": {
     "@types/react-scroll": "^1.8.7",
-    "@types/react-vertical-timeline-component": "^3.3.3",
-    "postcss": "^8.4.29"
+    "@types/react-vertical-timeline-component": "^3.3.3"
   }
 }
