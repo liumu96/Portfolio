@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 interface NavItem {
   label: string;
@@ -30,7 +31,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Models",
-    page: "projects", // todo
+    page: "blogs", // todo
   },
 ];
 
@@ -43,10 +44,12 @@ const Navbar = () => {
     <header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stont-600">
       <div className="justify-between md:items-center md:flex">
         <div>
-          <div className=" flex items-center justify-between py-3 md:py-5 md:block">
+          <div className=" flex items-center justify-between  md:block">
             <Link to="home">
               <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">Liu Xing</h2>
+                <h2 className="text-2xl font-bold">
+                  <Image src="/logo1.jpg" height={100} width={100} alt="logo" />
+                </h2>
               </div>
             </Link>
 
