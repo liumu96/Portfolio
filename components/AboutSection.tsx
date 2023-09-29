@@ -23,10 +23,10 @@ const languageSkills = [
 const AboutSection = () => {
   return (
     <section id="about">
-      <div className="my-12 pb-12 md:pt-16 md:pb-48">
+      <div className="my-12 pb-12 md:pt-16 md:pb-24">
         <h1 className="text-center font-bold text-4xl">
           About Me
-          <hr className="w-6 h-1 mx-auto my-4 bg-blue-500 border-0 rounded"></hr>
+          <hr className="w-6 h-1 mx-auto my-4 bg-purple-400 border-0 rounded"></hr>
         </h1>
 
         <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
@@ -39,7 +39,7 @@ const AboutSection = () => {
               <span className="font-bold">{"highly ambitious"}</span>,
               <span className="font-bold">{" self-motivated"}</span>, and
               <span className="font-bold">{" driven"}</span>{" "}
-              <span className="font-bold text-blue-500">explorer</span>.
+              <span className="font-bold text-purple-400">explorer</span>.
             </p>
             <br />
             <p>
@@ -78,13 +78,13 @@ const AboutSection = () => {
                 );
               })}
             </div>
-            <Image
+            {/* <Image
               src="/work3.jpeg"
               alt=""
               width={325}
               height={325}
               className="hidden md:block md:relative md:top-8 md:left-0 md:z-0"
-            />
+            /> */}
           </div>
         </div>
       </div>

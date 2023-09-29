@@ -1,8 +1,10 @@
 "use client";
 import SectionHeading from "./SectionHeading";
 import { PiGraduationCap } from "react-icons/pi";
+import { IoIosSchool } from "react-icons/io";
 import React from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 import {
   VerticalTimeline,
@@ -16,7 +18,7 @@ const experienceData = [
     title: "NUAA",
     location: "Nanjing, China",
     description: "B.S. in Microelectronics / GPA:  (3.9/5.0) Ranking: 1/27",
-    icon: React.createElement(PiGraduationCap),
+    icon: <Image src="/nuaa.png" alt="img" height={80} width={80} />,
     date: "2012.09-2016.06",
     age: 16,
   },
@@ -24,7 +26,15 @@ const experienceData = [
     title: "NUDT",
     location: "Changsha, China",
     description: "M.S. in Electronic Science and Technology",
-    icon: React.createElement(PiGraduationCap),
+    icon: (
+      <Image
+        src="/nudt.png"
+        alt="img"
+        height={80}
+        width={80}
+        className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full"
+      />
+    ),
     date: "2016.09-2018.12",
     age: 20,
   },
@@ -32,8 +42,16 @@ const experienceData = [
     title: "SF Tech",
     location: "Shenzhen, China",
     description:
-      "Developed the inaugural 3D Application of  SF Freight logistics hub, establishing a groundbreaking precedent within SF Tech. It’s the first 3D app in SF Tech. This digital twin platform harnesses AI and simulation technology to enable advanced logistics operation scheduling and early-warning capabilities, showcasing novel approach to industry standards.",
-    icon: React.createElement(PiGraduationCap),
+      "Frontend Developer: Developed the inaugural 3D Application of  SF Freight logistics hub, establishing a groundbreaking precedent within SF Tech. ",
+    icon: (
+      <Image
+        src="/SFTech.png"
+        alt="img"
+        height={60}
+        width={60}
+        className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full"
+      />
+    ),
     date: "2019.03-2021.05",
     age: 23,
   },
@@ -41,8 +59,16 @@ const experienceData = [
     title: "Tencent",
     location: "Shenzhen, China",
     description:
-      "Responsible for leading the development of digital twin tools and webpages for data centers. This involves creating a tool for building digital twin scenes and designing 3D + 2D graphics webpages, covering various scenarios like HVAC, electricity, monitoring, and access control, etc. The goal is to improve data center management and efficiency through innovative digital twin technology.",
-    icon: React.createElement(PiGraduationCap),
+      "Frontend Developer: Responsible for leading the development of digital twin tools and applications for data centers. ",
+    icon: (
+      <Image
+        src="/TX.png"
+        alt="img"
+        height={30}
+        width={30}
+        className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+      />
+    ),
     date: "2021.06-2023.04",
     age: 25,
   },
@@ -51,7 +77,16 @@ const experienceData = [
     location: "Xiamen, China",
     description:
       "Now I'm preparing for PHD application! I learn compter graphics fundamental, programming languages(c++, python), 3D tools(unity, blender), and try to implement some interesting projects.",
-    icon: React.createElement(PiGraduationCap),
+    // icon: React.createElement(IoIosSchool),
+    icon: (
+      <Image
+        src="/work1.jpeg"
+        alt="img"
+        height={80}
+        width={80}
+        className="absolute top-1/2 left-1/2 -translate-y-8 -translate-x-1/2 rounded-full"
+      />
+    ),
     date: "2023.4-present",
     age: 27,
   },
@@ -63,27 +98,31 @@ const ExperienceSection = () => {
   return (
     <section id="experience">
       <SectionHeading>Experience</SectionHeading>
+      <span className="font-bold text-4xl bg-gradient-to-r from-pink-300 to-purple-400 text-transparent bg-clip-text px-6 py-3 rounded-md">
+        My Experience
+      </span>
       <VerticalTimeline lineColor="">
         {experienceData.map((item, idx) => {
           return (
             <React.Fragment key={idx}>
               <VerticalTimelineElement
                 contentStyle={{
-                  background: "rgb(229, 231, 235)",
+                  background: "rgb(256, 256, 256)",
                   boxShadow: "none",
                   border: "1px solid rgba(0, 0, 0, 0.05)",
                   textAlign: "left",
                   padding: "0.5rem 0.5rem",
-                  color: "rgb(107, 114, 128)",
+                  color: "rgb(192 132 252)",
                 }}
+                style={{ visibility: "visible" }}
                 contentArrowStyle={{
                   borderRight: "7px solid  rgb(229, 231, 235)",
                 }}
                 date={item.date}
-                icon={<PiGraduationCap color={"black"} />}
+                icon={item.icon}
                 iconStyle={{
                   background: theme === "light" ? "white" : "white",
-                  fontSize: "1.5rem",
+                  // fontSize: "1.5rem",
                 }}
               >
                 <h3 className="font-semibold capitalize text-gray-500">

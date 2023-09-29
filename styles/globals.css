@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --white: #ecf0f2;
+  --blueish-white: #f8fafc;
+  --gray: #dee4f0;
+  --orange: #e74c3c;
+  --purple: #78378c;
+  --blue: #3c91e7;
+  --shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
+  --rounded-corners: 4px;
+  --rounded-corners-large: 8px;
+}
+
+.vertical-timeline--animate .vertical-timeline-element-icon.is-hidden,
+.vertical-timeline--animate .vertical-timeline-element-content.is-hidden {
+  display: block !important;
+  visibility: visible !important;
+}
+.page-controls {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  background: white;
+  /* opacity: 0; */
+  transform: translate(-50%);
+  transition: opacity ease-in-out 0.2s;
+  box-shadow: var(--shadow);
+  border-radius: var(--rounded-corners);
+  z-index: 2;
+}
+.page-controls button {
+  width: 44px;
+  height: 44px;
+  background: white;
+  border: 0;
+  font: inherit;
+  font-size: 0.8em;
+  border-radius: var(--rounded-corners);
+}

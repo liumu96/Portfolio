@@ -1,58 +1,60 @@
 "use client";
 import { useState } from "react";
-import { Link } from "react-scroll/modules";
+// import { Link } from "react-scroll/modules";
 import { useTheme } from "next-themes";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 interface NavItem {
   label: string;
-  page: string;
+  route: string;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Home",
-    page: "home",
+    route: "/",
   },
   {
     label: "About",
-    page: "about",
+    route: "/about",
   },
   {
     label: "Projects",
-    page: "projects",
+    route: "/projects",
   },
   {
     label: "Blogs",
-    page: "blogs", // todo
+    route: "/blogs", // todo
   },
   {
     label: "Models",
-    page: "blogs", // todo
+    route: "/models", // todo
   },
 ];
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme == "system" ? systemTheme : theme;
-  const pathname = usePathname();
+  const currentRoute = usePathname();
   const [navbar, setNavbar] = useState(false);
+
   return (
-    <header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stont-600">
+    <header className="w-full mx-auto px-4 md:py-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-purple-400">
       <div className="justify-between md:items-center md:flex">
         <div>
-          <div className=" flex items-center justify-between  md:block">
-            <Link to="home">
-              <div className="container flex items-center space-x-2">
+          <div className=" flex items-center justify-between md:block">
+            <Link href="/" className="scale-50">
+              <div className="container flex items-center space-x-2 ">
                 <h2 className="text-2xl font-bold">
-                  <Image src="/logo1.jpg" height={100} width={100} alt="logo" />
+                  <Image src="/logo.svg" height={80} width={80} alt="logo" />
                 </h2>
               </div>
             </Link>
-
+            {/* <div>12</div> */}
             <div className="md:hidden">
               <button
                 onClick={() => setNavbar(!navbar)}
@@ -74,16 +76,13 @@ const Navbar = () => {
                 return (
                   <Link
                     key={idx}
-                    to={item.page}
+                    href={item.route}
                     onClick={() => setNavbar(!navbar)}
-                    className={
-                      "block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-100"
-                    }
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
+                    className={`block lg:inline-block  hover:text-purple-400  ${
+                      currentRoute === item.route
+                        ? "text-purple-400 dark:text-purple-400 font-bold"
+                        : "text-neutral-900 dark:text-neutral-100"
+                    }`}
                   >
                     {item.label}
                   </Link>

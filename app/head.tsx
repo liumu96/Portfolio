@@ -1,14 +1,14 @@
 export default function Head() {
   return (
     <>
-      <title>Liu Xing's HomePage</title>
+      <title>Liu Xing | Portfolio</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
         name="description"
-        content="Liu Xing's HomePage for PHD Application"
+        content="Liu Xing's Portfolio for Computer Graphics"
       />
       <meta name="author" content="Liu Xing"></meta>
-      <link rel="icon" href="/logo1.jpg" />
+      <link rel="icon" href="/logo.svg" />
     </>
   );
 }

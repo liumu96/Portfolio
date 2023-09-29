@@ -7,13 +7,13 @@ import ModelSection from "@/components/ModelSection";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl">
+    <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl mb-24">
       <HeroSection />
       <AboutSection />
-      <ExperienceSection />
-      <ProjectsSection />
+      {/* <ExperienceSection /> */}
+      {/* <ProjectsSection />
       <BlogSection />
-      <ModelSection />
+      <ModelSection /> */}
     </main>
   );
 }
