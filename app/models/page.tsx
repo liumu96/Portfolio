@@ -58,7 +58,7 @@ const models = [
   {
     previewPath: "/models/SoftBody-01/render.mp4",
     previewImage: "/models/Fluid-01/preview.png",
-    categories: ["Smoke"],
+    categories: ["Fluid"],
     type: "video",
     description: "",
   },
@@ -95,7 +95,7 @@ const Models = () => {
           return (
             <div key={idx}>
               {/* <SlideUp offset="-300px 0px -300px 0px"> */}
-              <div className="flex justify-center ">
+              <div className="flex justify-center">
                 {model.type === "video" && model.previewPath && (
                   <ReactPlayer
                     controls
