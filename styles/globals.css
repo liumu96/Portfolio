@@ -21,7 +21,7 @@
 }
 .page-controls {
   position: absolute;
-  bottom: 3%;
+  /* bottom: 3%; */
   left: 50%;
   background: white;
   /* opacity: 0; */

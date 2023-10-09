@@ -17,7 +17,8 @@ const experienceData = [
   {
     title: "NUAA",
     location: "Nanjing, China",
-    description: "B.S. in Microelectronics / GPA:  (3.9/5.0) Ranking: 1/27",
+    description: "B.S. in Microelectronics ",
+    GPA: "GPA: (3.9/5.0) Ranking: 1/27",
     icon: <Image src="/nuaa.png" alt="img" height={80} width={80} />,
     date: "2012.09-2016.06",
     age: 16,
@@ -26,6 +27,7 @@ const experienceData = [
     title: "NUDT",
     location: "Changsha, China",
     description: "M.S. in Electronic Science and Technology",
+    GPA: "GPA: (3.5/4.0) No Ranking",
     icon: (
       <Image
         src="/nudt.png"
@@ -41,8 +43,9 @@ const experienceData = [
   {
     title: "SF Tech",
     location: "Shenzhen, China",
+    position: "Frontend Developer",
     description:
-      "Frontend Developer: Developed the inaugural 3D Application of  SF Freight logistics hub, establishing a groundbreaking precedent within SF Tech. ",
+      "Developed the inaugural 3D Application of  SF Freight logistics hub, establishing a groundbreaking precedent within SF Tech. ",
     icon: (
       <Image
         src="/SFTech.png"
@@ -56,10 +59,11 @@ const experienceData = [
     age: 23,
   },
   {
-    title: "Tencent",
+    title: "Tencent Tech",
     location: "Shenzhen, China",
+    position: "Frontend Developer",
     description:
-      "Frontend Developer: Responsible for leading the development of digital twin tools and applications for data centers. ",
+      "Responsible for leading the development of digital twin tools and applications for data centers. ",
     icon: (
       <Image
         src="/TX.png"
@@ -96,11 +100,11 @@ const ExperienceSection = () => {
   const { theme } = useTheme();
 
   return (
-    <section id="experience">
-      <SectionHeading>Experience</SectionHeading>
-      <span className="font-bold text-4xl bg-gradient-to-r from-pink-300 to-purple-400 text-transparent bg-clip-text px-6 py-3 rounded-md">
+    <div className="my-12 pb-12 md:pt-16 md:pb-24">
+      <h1 className="text-center font-bold text-4xl bg-gradient-to-r from-pink-300 to-purple-400 text-transparent bg-clip-text w-auto">
         My Experience
-      </span>
+        <hr className="w-6 h-1 mx-auto my-4 bg-purple-600 border-0 rounded"></hr>
+      </h1>
       <VerticalTimeline lineColor="">
         {experienceData.map((item, idx) => {
           return (
@@ -112,11 +116,11 @@ const ExperienceSection = () => {
                   border: "1px solid rgba(0, 0, 0, 0.05)",
                   textAlign: "left",
                   padding: "0.5rem 0.5rem",
-                  color: "rgb(192 132 252)",
+                  color: "rgb(168, 85, 247)",
                 }}
                 style={{ visibility: "visible" }}
                 contentArrowStyle={{
-                  borderRight: "7px solid  rgb(229, 231, 235)",
+                  borderRight: "7px solid rgb(229, 231, 235)",
                 }}
                 date={item.date}
                 icon={item.icon}
@@ -125,21 +129,22 @@ const ExperienceSection = () => {
                   // fontSize: "1.5rem",
                 }}
               >
-                <h3 className="font-semibold capitalize text-gray-500">
+                <h3 className="font-semibold capitalize text-black">
                   {item.title}
                 </h3>
-                <p className="font-normal !mt-0 text-gray-500">
-                  {item.location}
-                </p>
-                <p className="!mt-1 !font-normal text-gray-500">
+                <p className="font-normal !mt-0 text-black">{item.location}</p>
+                <p className="!mt-1 !font-normal text-black">
                   {item.description}
                 </p>
+                {item.GPA && (
+                  <p className="!mt-1 !font-normal text-black">{item.GPA}</p>
+                )}
               </VerticalTimelineElement>
             </React.Fragment>
           );
         })}
       </VerticalTimeline>
-    </section>
+    </div>
   );
 };
 

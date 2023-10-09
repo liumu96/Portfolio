@@ -39,10 +39,10 @@ const PDFViewer = ({ pdfPath }: { pdfPath: string }) => {
     changePage(+1);
   };
   return (
-    <div className="text-center relative">
+    <div className="text-center">
       <a
         href={pdfPath}
-        className="text-neutral-100 font-semibold px-6 py-3 bg-purple-600 rounded shadow hover:bg-purple-700 flex items-center gap-2 w-64 justify-center mb-6 mx-auto"
+        className="text-neutral-100 font-semibold px-6 py-3 bg-purple-500 rounded shadow hover:bg-purple-700 flex items-center gap-2 w-64 justify-center mb-6 mx-auto"
       >
         <HiDownload />
         Download CV
@@ -63,7 +63,7 @@ const PDFViewer = ({ pdfPath }: { pdfPath: string }) => {
           {/* <Page pageNumber={numPages} scale={width > 786 ? 1.5 : 0.6} /> */}
           <Page pageNumber={pageNumber} scale={width > 786 ? 1.5 : 0.6} />
           <div
-            className={`page-controls text-purple-400 flex flex-row justify-between items-center ${
+            className={`page-controls text-purple-400 flex flex-row justify-between items-center bottom-3 ${
               renderNavButtons ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -73,7 +73,6 @@ const PDFViewer = ({ pdfPath }: { pdfPath: string }) => {
               onClick={previousPage}
               className="flex items-center justify-center"
             >
-              {/* ‹ */}
               <FaArrowLeft />
             </button>
             <span>
@@ -85,7 +84,6 @@ const PDFViewer = ({ pdfPath }: { pdfPath: string }) => {
               onClick={nextPage}
               className="flex items-center justify-center"
             >
-              {/* › */}
               <FaArrowRight />
             </button>
           </div>

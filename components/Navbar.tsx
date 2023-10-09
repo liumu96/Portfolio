@@ -19,8 +19,8 @@ const NAV_ITEMS: Array<NavItem> = [
     route: "/",
   },
   {
-    label: "About",
-    route: "/about",
+    label: "CV",
+    route: "/CV",
   },
   {
     label: "Projects",

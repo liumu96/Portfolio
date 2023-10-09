@@ -6,8 +6,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-8 sm:py-16 md:py-20">
-      <ExperienceSection />
+    <div className="relative mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-8 sm:py-16 md:py-20">
       <PDFViewer pdfPath="/CV_liuxing.pdf" />
     </div>
   );

@@ -30,45 +30,33 @@ const HeroSection = () => {
           </h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             I used to be a{" "}
-            <span className="font-semibold text-purple-600">
+            <span className="font-semibold text-purple-500">
               Frontend Developer
             </span>
             . I develop 3D visuals, user interfaces and web applications
           </p>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             Now I'm a{" "}
-            <span className="font-semibold text-purple-600">Freelancer</span>!
+            <span className="font-semibold text-purple-500">Freelancer</span>!
           </p>
           <p className="text-lg mt-4 mb-12 md:text-2xl">
             I'm looking for a PHD position in Computer Graphics. My research
             interest is{" "}
-            <span className="font-semibold text-purple-600">
+            <span className="font-semibold text-purple-500">
               Physics Animation and Simulation.
             </span>
           </p>
-          <div className="flex gap-6 flex-row justify-start items-center">
+          <div className="flex md:gap-6 gap-3 flex-row md:justify-start justify-center items-center">
             <a
               href="/CV_liuxing.pdf"
-              className="text-neutral-100 font-semibold px-6 py-3 bg-purple-600 rounded shadow hover:bg-purple-700 flex items-center gap-2"
+              className="text-neutral-100 font-semibold md:px-6 px-2 py-3 bg-purple-500 rounded shadow hover:bg-purple-700 flex items-center gap-2"
             >
               Download CV
               <HiDownload />
             </a>
-
-            {/* <Link
-              to="projects"
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="text-neutral-100 font-semibold px-6 py-3 bg-purple-600 rounded shadow hover:bg-purple-700"
-            >
-              Projects
-            </Link> */}
             <Link
               href="/projects"
-              className="text-neutral-100 font-semibold px-6 py-3 bg-purple-600 rounded shadow hover:bg-purple-700"
+              className="text-neutral-100 font-semibold md:px-6 px-2 py-3 bg-purple-500 rounded shadow hover:bg-purple-700"
             >
               Projects
             </Link>

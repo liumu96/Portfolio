@@ -121,7 +121,7 @@ const Models = () => {
                   return (
                     <div
                       key={idx}
-                      className="bg-purple-400 mr-1 mt-1 px-2 py-2 text-white rounded"
+                      className="bg-purple-600 mr-1 mt-1 px-2 py-2 text-white rounded"
                     >
                       {category}
                     </div>
@@ -157,7 +157,7 @@ const Models = () => {
                   return (
                     <div
                       key={idx}
-                      className="bg-purple-400 mr-1 mt-1 px-2 py-2 text-white rounded"
+                      className="bg-purple-500 mr-1 mt-1 px-2 py-2 text-white rounded"
                     >
                       {category}
                     </div>

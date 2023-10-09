@@ -16,17 +16,17 @@ const skills = [
 const languageSkills = [
   { language: "Chinese", level: "mother language" },
   { language: "English", level: "IELTS 7.5" },
-  { language: "한국어", level: "Basic" },
-  { language: "Deutsch", level: "Basic" },
+  { language: "Deutsch", level: "A2" },
+  { language: "한국어", level: "TOPIK I" },
 ];
 
 const AboutSection = () => {
   return (
     <section id="about">
       <div className="my-12 pb-12 md:pt-16 md:pb-24">
-        <h1 className="text-center font-bold text-4xl">
+        <h1 className="text-center font-bold text-4xl bg-gradient-to-r from-pink-300 to-purple-400 text-transparent bg-clip-text w-auto">
           About Me
-          <hr className="w-6 h-1 mx-auto my-4 bg-purple-400 border-0 rounded"></hr>
+          <hr className="w-6 h-1 mx-auto my-4 bg-purple-600 border-0 rounded"></hr>
         </h1>
 
         <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
