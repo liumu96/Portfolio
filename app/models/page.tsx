@@ -55,6 +55,21 @@ const models = [
     type: "video",
     description: "",
   },
+  {
+    previewPath: "/models/SoftBody-01/render.mp4",
+    previewImage: "/models/Fluid-01/preview.png",
+    categories: ["Smoke"],
+    type: "video",
+    description: "",
+  },
+];
+const renderEffects = [
+  {
+    previewImage: "/models/Forest-01/preview.png",
+    categories: ["Render", "Nature"],
+    type: "image",
+    description: "",
+  },
 ];
 
 const Models = () => {
@@ -97,6 +112,42 @@ const Models = () => {
                     url={model.previewPath}
                     width="98%"
                     height="98%"
+                  />
+                )}
+              </div>
+
+              <div className="flex flex-row md:mx-0 sm:mx-0 mx-0 mt-2 flex-wrap">
+                {model.categories.map((category, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      className="bg-purple-400 mr-1 mt-1 px-2 py-2 text-white rounded"
+                    >
+                      {category}
+                    </div>
+                  );
+                })}
+              </div>
+              {/* </SlideUp> */}
+            </div>
+          );
+        })}
+      </div>
+      <span className="font-bold text-4xl bg-gradient-to-r from-pink-300 to-purple-400 text-transparent bg-clip-text px-6 py-3 rounded-md">
+        Others
+      </span>
+      <div className="grid gap-10 md:gap-6 md:grid-cols-2 sm:gap-3 lg:grid-cols-3 lg:gap-10">
+        {renderEffects.map((model, idx) => {
+          return (
+            <div key={idx}>
+              {/* <SlideUp offset="-300px 0px -300px 0px"> */}
+              <div className="flex justify-center ">
+                {model.type === "image" && (
+                  <img
+                    src={model.previewImage}
+                    alt="Thumbnail"
+                    className="rounded-lg shadow-lg"
+                    style={{ height: "98%", objectFit: "cover" }}
                   />
                 )}
               </div>
