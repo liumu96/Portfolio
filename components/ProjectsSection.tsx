@@ -13,6 +13,42 @@ const projects = [
     link: "https://fluid-2d.vercel.app/",
   },
   {
+    name: "Position Based Fluids",
+    description: "PlatoIO is a to do list app that built using the PERN stack.",
+    image: "/projects/fluid-2d/preview.png",
+    github: "https://github.com/liumu96/Fluid-2D",
+    link: "https://fluid-2d.vercel.app/",
+  },
+  {
+    name: "Position Based Dynamics",
+    description: "PlatoIO is a to do list app that built using the PERN stack.",
+    image: "/projects/fluid-2d/preview.png",
+    github: "https://github.com/liumu96/Fluid-2D",
+    link: "https://fluid-2d.vercel.app/",
+  },
+  {
+    name: "XPBD",
+    description: "PlatoIO is a to do list app that built using the PERN stack.",
+    image: "/projects/fluid-2d/preview.png",
+    github: "https://github.com/liumu96/Fluid-2D",
+    link: "https://fluid-2d.vercel.app/",
+  },
+  {
+    name: "FLIP Fluid Simulation",
+    description: "PlatoIO is a to do list app that built using the PERN stack.",
+    image: "/projects/fluid-2d/preview.png",
+    github: "https://github.com/liumu96/Fluid-2D",
+    link: "https://fluid-2d.vercel.app/",
+  },
+  {
+    name: "SPH Fluid Simulation",
+    description: "PlatoIO is a to do list app that built using the PERN stack.",
+    image: "/projects/fluid-2d/preview.png",
+    github: "https://github.com/liumu96/Fluid-2D",
+    link: "https://fluid-2d.vercel.app/",
+  },
+
+  {
     name: "Tiny Renderer",
     description:
       "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",

@@ -17,7 +17,7 @@ const HeroSection = () => {
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-32 md:flex-row md:space-x-4 md:text-left">
         <div className="md:mt-2 md:w-1/2">
           <Image
-            src="/work1.jpeg"
+            src="/me.jpg"
             alt=""
             width={325}
             height="325"
@@ -30,14 +30,22 @@ const HeroSection = () => {
           </h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             I used to be a{" "}
-            <span className="font-semibold text-purple-500">
-              Frontend Developer
-            </span>
-            . I develop 3D visuals, user interfaces and web applications
+            {/* <span className="font-semibold text-purple-500"> */}
+            Frontend Developer
+            {/* </span> */}. I develop 3D visuals, user interfaces and web
+            applications.
           </p>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             Now I'm a{" "}
-            <span className="font-semibold text-purple-500">Freelancer</span>!
+            <span className="font-semibold text-purple-500">
+              independent learner
+            </span>{" "}
+            with a strong interest in
+            <span className="font-semibold text-purple-500">
+              {" "}
+              Computer Graphics
+            </span>
+            !
           </p>
           <p className="text-lg mt-4 mb-12 md:text-2xl">
             I'm looking for a PHD position in Computer Graphics. My research

@@ -77,7 +77,7 @@ const experienceData = [
     age: 25,
   },
   {
-    title: "Freelancer",
+    title: "Independent Learner",
     location: "Xiamen, China",
     description:
       "Now I'm preparing for PHD application! I learn compter graphics fundamental, programming languages(c++, python), 3D tools(unity, blender), and try to implement some interesting projects.",
