@@ -13,11 +13,12 @@ const projects = [
     link: "https://fluid-2d.vercel.app/",
   },
   {
-    name: "Position Based Fluids",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/projects/fluid-2d/preview.png",
+    name: "Angry Bunny —— Rigid Body Dynamics",
+    description: "Write a rigid body dynamics solver in Unity",
+    image: "/projects/rigid-body/bunny.png",
     github: "https://github.com/liumu96/Fluid-2D",
-    link: "https://fluid-2d.vercel.app/",
+    link: "https://blogs-liuxing.vercel.app/post/bunny-how-to-write-a-rigid-body-dynamics-solver",
+    categories: ["rigid body", "impulse methods"],
   },
   {
     name: "Position Based Dynamics",
