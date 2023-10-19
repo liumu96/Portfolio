@@ -2,7 +2,11 @@ import * as THREE from "three";
 import Ball from "./ball-3d";
 import Grabber from "./grabber";
 import SoftBody from "./soft-body";
+import Cloth from "./cloth";
 import bunnyMesh from "./objects/bunnyMesh";
+import dragonTetMesh from "./objects/dragonTetMesh";
+import dragonVisMesh from "./objects/dragonVisMesh";
+import clothMeshes from "./objects/clothMesh";
 import Balls from "./balls";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 class ThreeScene {
@@ -18,6 +22,7 @@ class ThreeScene {
       numSubsteps: 10,
       worldBounds: [-1.0, 0.0, -1.0, 1.0, 2.0, 1.0],
       balls: null,
+      showEdges: false,
     };
 
     this.init();
@@ -242,7 +247,11 @@ class ThreeScene {
   }
 
   addBunnyMesh() {
-    const body = new SoftBody(bunnyMesh, this.threeScene);
+    const body = new SoftBody({
+      tetMesh: bunnyMesh,
+      scene: this.threeScene,
+      edgeCompliance: 100.0,
+    });
     if (this.physicsScene.objects.length) {
       body.translate(
         -1.0 + 2.0 * Math.random(),
@@ -251,7 +260,21 @@ class ThreeScene {
       );
     }
     this.physicsScene.objects.push(body);
-    this.threeScene.add(body.surfaceMesh);
+  }
+
+  addDragonMesh() {
+    const body = new SoftBody({
+      tetMesh: dragonTetMesh,
+      visMesh: dragonVisMesh,
+      scene: this.threeScene,
+    });
+    this.physicsScene.objects.push(body);
+  }
+
+  addCloth() {
+    const mesh = clothMeshes[0];
+    const body = new Cloth(mesh, this.threeScene);
+    this.physicsScene.objects.push(body);
   }
 
   update(type) {
@@ -299,6 +322,8 @@ class ThreeScene {
       for (let i = 0; i < physicsScene.objects.length; i++)
         physicsScene.objects[i].postSolve(sdt);
     }
+    for (var i = 0; i < physicsScene.objects.length; i++)
+      physicsScene.objects[i].endFrame();
 
     if (this.grabber) {
       this.grabber.increaseTime(this.physicsScene.dt);
@@ -319,12 +344,24 @@ class ThreeScene {
     const { physicsScene } = this;
     for (let i = 0; i < physicsScene.objects.length; i++)
       physicsScene.objects[i].squash();
-    if (!physicsScene.paused) this.run();
+    if (!physicsScene.paused) {
+      this.pause();
+    } else {
+      this.run();
+    }
   }
   showCollision() {
     if (this.physicsScene.balls)
       this.physicsScene.balls.showCollisions =
         !this.physicsScene.balls.showCollisions;
+  }
+  showEdges() {
+    const { physicsScene } = this;
+    physicsScene.showEdges = !physicsScene.showEdges;
+    for (let i = 0; i < physicsScene.objects.length; i++) {
+      physicsScene.objects[i].edgeMesh.visible = physicsScene.showEdges;
+      physicsScene.objects[i].triMesh.visible = !physicsScene.showEdges;
+    }
   }
 }
 

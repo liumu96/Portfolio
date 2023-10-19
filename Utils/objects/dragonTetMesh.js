@@ -2406,3 +2406,5 @@ const dragonTetMesh = {
     1232,
   ],
 };
+
+export default dragonTetMesh;

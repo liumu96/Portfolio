@@ -57,12 +57,12 @@ class Grabber {
       this.prevPos.copy(pos);
       this.time = 0.0;
 
-      this.physicsObject.moveGrabbed(pos, this.vel);
+      this.physicsObject.moveGrabbed(pos);
     }
   }
   end() {
     if (this.physicsObject) {
-      this.physicsObject.endGrab(this.prevPos, this.vel);
+      this.physicsObject.endGrab(this.vel);
       this.physicsObject = null;
     }
   }

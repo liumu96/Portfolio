@@ -18,13 +18,10 @@ const physicsDemos = [
     previewImage: "/projects/physics-tutorial/ball-3d.gif",
   },
   {
-    title: "Billard",
-    link: "/projects/physics-tutorial/billard",
-    previewImage: "/projects/physics-tutorial/billard.gif",
+    title: "Billiard",
+    link: "/projects/physics-tutorial/billiard",
+    previewImage: "/projects/physics-tutorial/billiard.gif",
   },
-  // {
-  //   title: "Pin Ball",
-  // },
   {
     title: "Bead",
     link: "/projects/physics-tutorial/bead",
@@ -56,16 +53,17 @@ const physicsDemos = [
   {
     title: "Spatial Hashing",
     link: "/projects/physics-tutorial/spatial-hashing",
-    previewImage: "/projects/physics-tutorial/ball-interaction.gif",
+    previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
   },
   {
     title: "Soft Body Skinning",
-  },
-  {
-    title: "Tetrahedralizer for Blender",
+    link: "/projects/physics-tutorial/soft-body-skinning",
+    previewImage: "/projects/physics-tutorial/soft-dragon.gif",
   },
   {
     title: "Cloth Simulation",
+    link: "/projects/physics-tutorial/cloth-simulation",
+    previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
   },
   {
     title: "Self Collisions",
