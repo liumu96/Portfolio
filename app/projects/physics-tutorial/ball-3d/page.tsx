@@ -8,6 +8,7 @@ import { FaPlay, FaPauseCircle } from "react-icons/fa";
 import { VscDebugRestart } from "react-icons/vsc";
 import MarkdownText from "@/components/MarkdownText";
 import description from "@/public/notes/ball-3d.md";
+import { Vector3 } from "three";
 
 const CannonBall3D = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -17,6 +18,9 @@ const CannonBall3D = () => {
   useEffect(() => {
     if (canvasRef.current) {
       const threeScene = new ThreeScene(canvasRef.current);
+      threeScene.physicsScene = Object.assign({}, threeScene.physicsScene, {
+        gravity: new Vector3(0.0, -10.0, 0.0),
+      });
       threeScene.addBall3D();
       threeScene.addBox();
       threeScene.addSpotLight();

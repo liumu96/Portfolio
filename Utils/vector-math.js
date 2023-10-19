@@ -136,6 +136,12 @@ function matSetInverse(A) {
   A[8] = (a11 * a22 - a12 * a21) * invDet;
 }
 
+function clamp(x, min, max) {
+  if (x < min) return min;
+  else if (x > max) return max;
+  else return x;
+}
+
 export {
   vecSetZero,
   vecScale,
@@ -150,4 +156,5 @@ export {
   matSetInverse,
   matGetDeterminant,
   vecSetSum,
+  clamp,
 };

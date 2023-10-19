@@ -72,12 +72,12 @@ const physicsDemos = [
   },
   {
     title: "Eulerian Fluid Simulation",
-    link: "/projects/physics-tutorial/cloth-self-collision",
+    link: "/projects/physics-tutorial/eulerian-fluid-sim",
     previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
   },
   {
     title: "FLIP Water Simulation",
-    link: "/projects/physics-tutorial/cloth-self-collision",
+    link: "/projects/physics-tutorial/flip-water-simulation",
     previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
   },
   {

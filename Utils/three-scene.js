@@ -4,10 +4,12 @@ import Grabber from "./grabber";
 import SoftBody from "./soft-body";
 import Cloth from "./cloth";
 import SelfCollisionCloth from "./self-collision-cloth";
+import WaterSurface from "./water-surface";
 import bunnyMesh from "./objects/bunnyMesh";
 import dragonTetMesh from "./objects/dragonTetMesh";
 import dragonVisMesh from "./objects/dragonVisMesh";
 import clothMeshes from "./objects/clothMesh";
+import { waterVertexShader, waterFragmentShader } from "./shader";
 import Balls from "./balls";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 class ThreeScene {
@@ -118,6 +120,10 @@ class ThreeScene {
     this.camera.aspect = (0.6 * window.innerWidth) / (window.innerHeight - 300);
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(0.6 * window.innerWidth, window.innerHeight - 300);
+    this.renderTarget.setSize(
+      0.6 * window.innerWidth,
+      window.innerHeight - 300
+    );
   }
 
   initLight() {
@@ -197,9 +203,8 @@ class ThreeScene {
     const radius = 0.2;
     const pos = new THREE.Vector3(radius, radius, radius);
     const vel = new THREE.Vector3(2.0, 5.0, 3.0);
-    const ball = new Ball(pos, radius, vel);
+    const ball = new Ball({ pos, radius, vel, scene: this.threeScene });
     this.physicsScene.objects.push(ball);
-    this.threeScene.add(ball.visMesh);
   }
 
   addBalls() {
@@ -243,9 +248,8 @@ class ThreeScene {
     const radius = 0.2;
     const pos = new THREE.Vector3(radius, 1.0, radius);
     const vel = new THREE.Vector3();
-    const ball = new Ball(pos, radius, vel);
+    const ball = new Ball({ pos, radius, vel, scene: this.threeScene });
     this.physicsScene.objects.push(ball);
-    this.threeScene.add(ball.visMesh);
   }
 
   addBunnyMesh() {
@@ -294,13 +298,104 @@ class ThreeScene {
     );
   }
 
+  addWaterScene() {
+    const { physicsScene, threeScene } = this;
+    // water surface
+
+    this.renderTarget = new THREE.WebGLRenderTarget(
+      0.6 * window.innerWidth,
+      window.innerHeight - 300,
+      {
+        minFilter: THREE.LinearFilter,
+        magFilter: THREE.NearestFilter,
+        format: THREE.RGBAFormat,
+      }
+    );
+    const waterMaterial = new THREE.ShaderMaterial({
+      uniforms: { background: { value: this.renderTarget.texture } },
+      vertexShader: waterVertexShader,
+      fragmentShader: waterFragmentShader,
+    });
+    console.log(this.renderTarget.texture);
+
+    let wx = physicsScene.tankSize.x;
+    let wy = physicsScene.tankSize.y;
+    let wz = physicsScene.tankSize.z;
+    let b = physicsScene.tankBorder;
+
+    var waterSurface = new WaterSurface(
+      wx,
+      wz,
+      physicsScene.waterHeight,
+      physicsScene.waterSpacing,
+      waterMaterial,
+      threeScene
+    );
+    physicsScene.waterSurface = waterSurface;
+
+    // tank
+
+    var tankMaterial = new THREE.MeshPhongMaterial({ color: 0xf9a8d4 });
+    var boxGeometry = new THREE.BoxGeometry(b, wy, wz);
+    var box = new THREE.Mesh(boxGeometry, tankMaterial);
+    box.position.set(-0.5 * wx, wy * 0.5, 0.0);
+    threeScene.add(box);
+    var box = new THREE.Mesh(boxGeometry, tankMaterial);
+    box.position.set(0.5 * wx, 0.5 * wy, 0.0);
+    threeScene.add(box);
+    var boxGeometry = new THREE.BoxGeometry(wx, wy, b);
+    var box = new THREE.Mesh(boxGeometry, tankMaterial);
+    box.position.set(0.0, 0.5 * wy, -wz * 0.5);
+    threeScene.add(box);
+    var box = new THREE.Mesh(boxGeometry, tankMaterial);
+    box.position.set(0.0, 0.5 * wy, wz * 0.5);
+    threeScene.add(box);
+
+    // ball
+
+    physicsScene.objects.push(
+      new Ball({
+        pos: new THREE.Vector3(-0.5, 1.0, -0.5),
+        radius: 0.2,
+        density: 2.0,
+        color: 0xffff00,
+        scene: this.threeScene,
+      })
+    );
+    physicsScene.objects.push(
+      new Ball({
+        pos: new THREE.Vector3(0.5, 1.0, -0.5),
+        radius: 0.3,
+        density: 0.7,
+        color: 0xff8000,
+        scene: this.threeScene,
+      })
+    );
+    physicsScene.objects.push(
+      new Ball({
+        pos: new THREE.Vector3(-0.5, 1.0, 0.5),
+        radius: 0.25,
+        density: 0.2,
+        color: 0xff0000,
+        scene: this.threeScene,
+      })
+    );
+  }
   update(type) {
     if (type === "xpbd") {
       this.xpbdSimulate();
     } else {
       this.simulate();
     }
+    if (this.physicsScene.waterSurface) {
+      this.physicsScene.waterSurface.setVisible(false);
+      this.renderer.setRenderTarget(this.renderTarget);
+      this.renderer.clear();
+      this.renderer.render(this.threeScene, this.camera);
 
+      this.physicsScene.waterSurface.setVisible(true);
+      this.renderer.setRenderTarget(null);
+    }
     this.renderer.render(this.threeScene, this.camera);
     this.cameraControl.update();
 
@@ -308,29 +403,42 @@ class ThreeScene {
   }
 
   simulate() {
-    if (this.physicsScene.paused) return;
-    if (this.physicsScene.cloth) {
-      this.physicsScene.cloth.simulate(
-        this.physicsScene.dt,
-        this.physicsScene.numSubsteps,
-        this.physicsScene.gravity
+    const { physicsScene } = this;
+    if (physicsScene.paused) return;
+    if (physicsScene.cloth) {
+      physicsScene.cloth.simulate(
+        physicsScene.dt,
+        physicsScene.numSubsteps,
+        physicsScene.gravity
       );
 
       if (this.grabber) {
-        this.grabber.increaseTime(this.physicsScene.dt);
+        this.grabber.increaseTime(physicsScene.dt);
       }
-    } else if (this.physicsScene.balls) {
-      this.physicsScene.balls.simulate(
-        this.physicsScene.dt,
-        this.physicsScene.gravity,
-        this.physicsScene.worldBounds
+    } else if (physicsScene.balls) {
+      physicsScene.balls.simulate(
+        physicsScene.dt,
+        physicsScene.gravity,
+        physicsScene.worldBounds
       );
+    } else if (physicsScene.waterSurface) {
+      physicsScene.waterSurface.simulate({
+        dt: physicsScene.dt,
+        objects: physicsScene.objects,
+        gravity: physicsScene.gravity,
+      });
+      for (let i = 0; i < physicsScene.objects.length; i++) {
+        const obj = physicsScene.objects[i];
+        obj.simulate(physicsScene);
+        for (let j = 0; j < i; j++)
+          obj.handleCollision(physicsScene.objects[j]);
+      }
     } else {
-      for (let i = 0; i < this.physicsScene.objects.length; i++) {
-        this.physicsScene.objects[i].simulate(this.physicsScene);
+      for (let i = 0; i < physicsScene.objects.length; i++) {
+        physicsScene.objects[i].simulate(physicsScene);
       }
       if (this.grabber) {
-        this.grabber.increaseTime(this.physicsScene.dt);
+        this.grabber.increaseTime(physicsScene.dt);
       }
     }
   }
