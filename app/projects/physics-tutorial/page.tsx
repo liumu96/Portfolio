@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { IoArrowBackOutline } from "react-icons/io5";
+import RouterTitle from "@/components/routerTitle";
 
 const physicsDemos = [
   {
@@ -37,9 +40,6 @@ const physicsDemos = [
     link: "/projects/physics-tutorial/pendulum",
     previewImage: "/projects/physics-tutorial/pendulum.gif",
   },
-  // {
-  //   title: "Pendulumshort",
-  // },
   {
     title: "Ball 3D - Interaction",
     link: "/projects/physics-tutorial/ball-3d-interact",
@@ -88,11 +88,10 @@ const physicsDemos = [
 ];
 
 const PhysicsTutorial = () => {
+  const router = useRouter();
   return (
     <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-8 sm:py-24 md:py-20 sm:px-8 px-8">
-      <span className="font-bold text-4xl bg-gradient-to-r from-pink-300 to-purple-400 text-transparent bg-clip-text px-6 py-3 rounded-md">
-        Physics Tutorial
-      </span>
+      <RouterTitle title="Physics Tutorial" />
       <span className="mb-8 mt-2">
         Demos on this page is implemented following the toturial course{" "}
         <a>Ten Minute Physics</a>. I make notes for every demo.
