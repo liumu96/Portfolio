@@ -15,7 +15,7 @@ a = g \approx 9.8 m/s^2
 $$
 
 - Using the **Acceleration** to update Velocity and Position.
-  In this demo we use \***\*Symplectic Euler Time Integration:\*\*** updating the velocity before the position in order to get a stable simulation
+  In this demo we use **Symplectic Euler Time Integration:** updating the velocity before the position in order to get a stable simulation
   - First take an explicit velocity step
     $$
     x^{t+1} = x^t + \Delta t * v^{t+1}

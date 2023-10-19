@@ -20,7 +20,8 @@ class Ball {
 
   simulate(physicsScene) {
     if (this.grabbed) return;
-    this.vel.addScaledVector(physicsScene.gravity, physicsScene.dt);
+    const gravity = new THREE.Vector3(...physicsScene.gravity);
+    this.vel.addScaledVector(gravity, physicsScene.dt);
     this.pos.addScaledVector(this.vel, physicsScene.dt);
     const { worldSize } = physicsScene;
 

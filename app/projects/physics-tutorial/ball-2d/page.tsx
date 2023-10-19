@@ -3,18 +3,16 @@ import { useEffect, useRef, useState } from "react";
 import CanvasScene from "@/Utils/canvas-scene";
 import RouterTitle from "@/components/routerTitle";
 import MarkdownText from "@/components/MarkdownText";
-import description from "@/public/notes/description.md";
+import description from "@/public/notes/ball-2d.md";
 
 const CannonBall2D = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // const [description, setDesciption] = useState<any>();
   useEffect(() => {
     if (canvasRef.current) {
       const canvasScene = new CanvasScene(canvasRef.current);
       canvasScene.addBall();
       canvasScene.update();
     }
-    console.log(description);
   }, []);
 
   return (
