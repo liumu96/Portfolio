@@ -1,3 +1,5 @@
+import { vecDistSquared } from "./vector-math";
+
 class Hash {
   constructor(spacing, maxNumObjects) {
     this.spacing = spacing;
@@ -6,6 +8,10 @@ class Hash {
     this.cellEntries = new Int32Array(maxNumObjects);
     this.queryIds = new Int32Array(maxNumObjects);
     this.querySize = 0;
+
+    this.maxNumObjects = maxNumObjects;
+    this.firstAdjId = new Int32Array(maxNumObjects + 1);
+    this.adjIds = new Int32Array(10 * maxNumObjects);
   }
 
   hashCoords(xi, yi, zi) {
@@ -81,6 +87,33 @@ class Hash {
         }
       }
     }
+  }
+
+  queryAll(pos, maxDist) {
+    var num = 0;
+    var maxDist2 = maxDist * maxDist;
+
+    for (var i = 0; i < this.maxNumObjects; i++) {
+      var id0 = i;
+      this.firstAdjId[id0] = num;
+      this.query(pos, id0, maxDist);
+
+      for (var j = 0; j < this.querySize; j++) {
+        var id1 = this.queryIds[j];
+        if (id1 >= id0) continue;
+        var dist2 = vecDistSquared(pos, id0, pos, id1);
+        if (dist2 > maxDist2) continue;
+
+        if (num >= this.adjIds.length) {
+          var newIds = new Int32Array(2 * num); // dynamic array
+          newIds.set(this.adjIds);
+          this.adjIds = newIds;
+        }
+        this.adjIds[num++] = id1;
+      }
+    }
+
+    this.firstAdjId[this.maxNumObjects] = num;
   }
 }
 

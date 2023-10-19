@@ -63,20 +63,27 @@ const physicsDemos = [
   {
     title: "Cloth Simulation",
     link: "/projects/physics-tutorial/cloth-simulation",
-    previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
+    previewImage: "/projects/physics-tutorial/cloth-simulation.gif",
   },
   {
     title: "Self Collisions",
+    link: "/projects/physics-tutorial/cloth-self-collision",
+    previewImage: "/projects/physics-tutorial/self-collision.gif",
   },
   {
     title: "Eulerian Fluid Simulation",
+    link: "/projects/physics-tutorial/cloth-self-collision",
+    previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
   },
   {
     title: "FLIP Water Simulation",
+    link: "/projects/physics-tutorial/cloth-self-collision",
+    previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
   },
   {
     title: "Height-Field Water Simulation",
     link: "/projects/physics-tutorial/height-field-water",
+    previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
   },
 ];
 

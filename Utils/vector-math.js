@@ -37,6 +37,15 @@ function vecSetDiff(dst, dnr, a, anr, b, bnr, scale = 1.0) {
   dst[dnr] = (a[anr] - b[bnr]) * scale;
 }
 
+function vecSetSum(dst, dnr, a, anr, b, bnr, scale = 1.0) {
+  dnr *= 3;
+  anr *= 3;
+  bnr *= 3;
+  dst[dnr++] = (a[anr++] + b[bnr++]) * scale;
+  dst[dnr++] = (a[anr++] + b[bnr++]) * scale;
+  dst[dnr] = (a[anr] + b[bnr]) * scale;
+}
+
 function vecLengthSquared(a, anr) {
   anr *= 3;
   let a0 = a[anr],
@@ -140,4 +149,5 @@ export {
   matSetMult,
   matSetInverse,
   matGetDeterminant,
+  vecSetSum,
 };

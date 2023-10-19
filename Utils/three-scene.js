@@ -3,6 +3,7 @@ import Ball from "./ball-3d";
 import Grabber from "./grabber";
 import SoftBody from "./soft-body";
 import Cloth from "./cloth";
+import SelfCollisionCloth from "./self-collision-cloth";
 import bunnyMesh from "./objects/bunnyMesh";
 import dragonTetMesh from "./objects/dragonTetMesh";
 import dragonVisMesh from "./objects/dragonVisMesh";
@@ -23,6 +24,7 @@ class ThreeScene {
       worldBounds: [-1.0, 0.0, -1.0, 1.0, 2.0, 1.0],
       balls: null,
       showEdges: false,
+      cloth: null,
     };
 
     this.init();
@@ -277,6 +279,21 @@ class ThreeScene {
     this.physicsScene.objects.push(body);
   }
 
+  addSelfCollisionCloth() {
+    const spacing = 0.01;
+    const thickness = 0.01;
+    const numX = 30;
+    const numY = 200;
+
+    this.physicsScene.cloth = new SelfCollisionCloth(
+      this.threeScene,
+      numX,
+      numY,
+      spacing,
+      thickness
+    );
+  }
+
   update(type) {
     if (type === "xpbd") {
       this.xpbdSimulate();
@@ -292,7 +309,17 @@ class ThreeScene {
 
   simulate() {
     if (this.physicsScene.paused) return;
-    if (this.physicsScene.balls) {
+    if (this.physicsScene.cloth) {
+      this.physicsScene.cloth.simulate(
+        this.physicsScene.dt,
+        this.physicsScene.numSubsteps,
+        this.physicsScene.gravity
+      );
+
+      if (this.grabber) {
+        this.grabber.increaseTime(this.physicsScene.dt);
+      }
+    } else if (this.physicsScene.balls) {
       this.physicsScene.balls.simulate(
         this.physicsScene.dt,
         this.physicsScene.gravity,
@@ -358,9 +385,15 @@ class ThreeScene {
   showEdges() {
     const { physicsScene } = this;
     physicsScene.showEdges = !physicsScene.showEdges;
-    for (let i = 0; i < physicsScene.objects.length; i++) {
-      physicsScene.objects[i].edgeMesh.visible = physicsScene.showEdges;
-      physicsScene.objects[i].triMesh.visible = !physicsScene.showEdges;
+    if (physicsScene.cloth) {
+      physicsScene.cloth.edgeMesh.visible = physicsScene.showEdges;
+      physicsScene.cloth.triMesh.visible = !physicsScene.showEdges;
+      physicsScene.cloth.backMesh.visible = !physicsScene.showEdges;
+    } else {
+      for (let i = 0; i < physicsScene.objects.length; i++) {
+        physicsScene.objects[i].edgeMesh.visible = physicsScene.showEdges;
+        physicsScene.objects[i].triMesh.visible = !physicsScene.showEdges;
+      }
     }
   }
 }
