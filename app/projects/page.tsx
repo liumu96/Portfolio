@@ -14,6 +14,7 @@ const Projects = () => {
         Practicing these algorithms can help me gain a deeper understanding of
         the underlying principles.
       </p>
+
       <ProjectsSection />
     </div>
   );

@@ -6,64 +6,38 @@ import Image from "next/image";
 
 const projects = [
   {
-    name: "Fluid 2D Simulation",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/projects/fluid-2d/preview.png",
-    github: "https://github.com/liumu96/Fluid-2D",
-    link: "https://fluid-2d.vercel.app/",
+    name: "Ten Minutes Physics Tutorial",
+    description:
+      'These physics-based animation showcases was created by following the <a href="https://matthias-research.github.io/pages/tenMinutePhysics/index.html" style="color: rgb(192, 132, 252)">"Ten Minute Physics"</a> tutorial and leverages JavaScript and Three.js to implement position-based dynamics, soft body simulation, cloth simulation, fluid simulation etc. 💥',
+    image: "/projects/physics-tutorial/preview.png",
+    link: "/projects/physics-tutorial",
   },
   {
-    name: "Angry Bunny —— Rigid Body Dynamics",
-    description: "Write a rigid body dynamics solver in Unity",
-    image: "/projects/rigid-body/bunny.png",
-    github: "https://github.com/liumu96/Fluid-2D",
-    link: "https://blogs-liuxing.vercel.app/post/bunny-how-to-write-a-rigid-body-dynamics-solver",
-    categories: ["rigid body", "impulse methods"],
+    name: "CSC417-Physics-based Animation",
+    description:
+      '<a style="color: rgb(192, 132, 252)" href="https://github.com/dilevin/CSC417-physics-based-animation">CSC417</a> introduces the underlying mathematical and algorithmic techniques required to understand and develop efficient numerical simulations of physical phenomena such as rigid bodies, deformable bodies and fluids. Here is the showcases of the course assignments implemented by C++. The assignments includes: <p>💥 1D mass-springs & 3D mass-springs </p><p> 💥 3d FEM  </p><p> 💥 Finite Elements for Cloth Simulation </p><p> 💥 Rigid Body Simulation',
+    image: "/projects/CSC417/animation.gif",
+    link: "/projects/fluid-simulation",
   },
   {
-    name: "Position Based Dynamics",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/projects/fluid-2d/preview.png",
-    github: "https://github.com/liumu96/Fluid-2D",
-    link: "https://fluid-2d.vercel.app/",
-  },
-  {
-    name: "XPBD",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/projects/fluid-2d/preview.png",
-    github: "https://github.com/liumu96/Fluid-2D",
-    link: "https://fluid-2d.vercel.app/",
-  },
-  {
-    name: "FLIP Fluid Simulation",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/projects/fluid-2d/preview.png",
-    github: "https://github.com/liumu96/Fluid-2D",
-    link: "https://fluid-2d.vercel.app/",
-  },
-  {
-    name: "SPH Fluid Simulation",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/projects/fluid-2d/preview.png",
-    github: "https://github.com/liumu96/Fluid-2D",
-    link: "https://fluid-2d.vercel.app/",
+    name: "GAMES103-Physics-based Animation",
+    description:
+      'This is a Chinese course taught by <a style="color: rgb(192, 132, 252)" href="https://wanghmin.github.io/">HUAMIN WANG</a>. This course includes four area: rigid body simulation, mass-spring systems simulation, FEM-based simulation, fluid simulation. This course is a littele different from the CS417, and the assignments is implemented by C# in Unity.',
+    image: "/projects/GAMES103/preview.jpeg",
+    link: "/projects/fluid-simulation",
   },
 
   {
-    name: "Tiny Renderer",
-    description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/work3.jpeg",
-    github: "https://github.com/liumu96",
-    link: "https://github.com/liumu96",
+    name: "Rigid Body",
+    description: "xxxxx",
+    image: "/projects/rigid-body/bunny.png",
+    link: "/projects/rigid-body",
   },
   {
-    name: "Physics Simulation",
-    description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/work2.jpeg",
-    github: "https://github.com/liumu96",
-    link: "https://github.com/liumu96",
+    name: "Fluid Simulation",
+    description: "",
+    image: "/projects/fluid-2d/preview.png",
+    link: "/projects/fluid-simulation",
   },
 ];
 
@@ -86,12 +60,13 @@ const ProjectsSection = () => {
                     />
                   </Link>
                 </div>
-                <div className="mt-8 md:w-1/2">
+                <div className="mt-0 md:w-1/2">
                   <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-                  <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-row align-bottom space-x-4">
+                  <p
+                    className=" leading-7  text-left"
+                    dangerouslySetInnerHTML={{ __html: project.description }}
+                  ></p>
+                  {/* <div className="flex flex-row align-bottom space-x-4">
                     <Link href={project.github} target="_blank">
                       <BsGithub
                         size={30}
@@ -104,7 +79,7 @@ const ProjectsSection = () => {
                         className="hover:-translate-y-1 transition-transform cursor-pointer"
                       />
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </SlideUp>

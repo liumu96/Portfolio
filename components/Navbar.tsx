@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-// import { Link } from "react-scroll/modules";
 import { useTheme } from "next-themes";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
@@ -51,7 +50,7 @@ const Navbar = () => {
             <Link href="/" className="scale-50">
               <div className="container flex items-center space-x-2 ">
                 <h2 className="text-2xl font-bold">
-                  <Image src="/logo.svg" height={80} width={80} alt="logo" />
+                  <Image src="/logo.svg" height={60} width={60} alt="logo" />
                 </h2>
               </div>
             </Link>
@@ -74,6 +73,22 @@ const Navbar = () => {
           >
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {NAV_ITEMS.map((item, idx) => {
+                if (item.label === "Blogs") {
+                  return (
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://blogs-liuxing.vercel.app/"
+                      className={`block lg:inline-block  hover:text-purple-400  ${
+                        currentRoute === item.route
+                          ? "text-purple-400 dark:text-purple-400 font-bold"
+                          : "text-neutral-900 dark:text-neutral-100"
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  );
+                }
                 return (
                   <Link
                     key={idx}
