@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { IoArrowBackOutline } from "react-icons/io5";
 import RouterTitle from "@/components/routerTitle";
 
 const physicsDemos = [
@@ -71,9 +69,9 @@ const physicsDemos = [
     previewImage: "/projects/physics-tutorial/self-collision.gif",
   },
   {
-    title: "Eulerian Fluid Simulation",
-    link: "/projects/physics-tutorial/eulerian-fluid-sim",
-    previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
+    title: "Eulerian Smoke Simulation",
+    link: "/projects/physics-tutorial/eulerian-smoke-sim",
+    previewImage: "/projects/physics-tutorial/smoke-simulation.gif",
   },
   {
     title: "FLIP Water Simulation",
@@ -83,18 +81,31 @@ const physicsDemos = [
   {
     title: "Height-Field Water Simulation",
     link: "/projects/physics-tutorial/height-field-water",
-    previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
+    previewImage: "/projects/physics-tutorial/height-field.gif",
   },
 ];
 
 const PhysicsTutorial = () => {
-  const router = useRouter();
   return (
     <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-8 sm:py-24 md:py-20 sm:px-8 px-8">
       <RouterTitle title="Physics Tutorial" />
       <span className="mb-8 mt-2">
-        Demos on this page is implemented following the toturial course{" "}
-        <a>Ten Minute Physics</a>. I make notes for every demo.
+        The demos on this page are created using the principles and techniques
+        I've learned from{" "}
+        <a
+          href="https://matthias-research.github.io/pages/tenMinutePhysics/index.html"
+          className="text-purple-400"
+        >
+          Ten Minute Physics
+        </a>{" "}
+        tutorial course.
+        <p>
+          While the original code was in HTML, I've taken it a step further by
+          implementing these demos in modular form.
+        </p>{" "}
+        {/* Explore these hands-on projects to witness how I've translated the
+        concepts into real-world applications. Each demo is a testament to my
+        dedication and expertise in physics-based animation and simulation. */}
       </span>
       <div className="w-full grid gap-10 md:gap-6 md:grid-cols-2 sm:gap-3 lg:grid-cols-3 lg:gap-10">
         {physicsDemos.map((demo, idx) => {

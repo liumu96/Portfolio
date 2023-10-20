@@ -2,36 +2,40 @@ import React from "react";
 import Image from "next/image";
 import RouterTitle from "@/components/routerTitle";
 
-const fluidSimulation = [
+const homeworks = [
   {
-    title: "Eulerian Fluid Simulator",
-    previewImage: "/projects/fluid-2d/preview.png",
+    title: "1d-mass-spring",
+    previewImage: "/projects/CSC417/animation.gif",
   },
   {
-    title: "FLIP Water Simulator",
-    previewImage: "/projects/fluid-2d/preview.png",
+    title: "3d-mass-spring",
+    previewImage: "/projects/CSC417/animation.gif",
   },
   {
-    title: "Height-Field Water Simulation",
-    previewImage: "/projects/fluid-2d/preview.png",
+    title: "FEM-cloth",
+    previewImage: "/projects/CSC417/animation.gif",
   },
   {
-    title: "Smoke Simulation",
-    previewImage: "/projects/fluid-2d/preview.png",
+    title: "finite-element-method",
+    previewImage: "/projects/CSC417/animation.gif",
   },
   {
-    title: "Cloth Simulation",
-    previewImage: "/projects/fluid-2d/preview.png",
+    title: "rigid-body",
+    previewImage: "/projects/CSC417/animation.gif",
+  },
+  {
+    title: "rigid-body-collision",
+    previewImage: "/projects/CSC417/animation.gif",
   },
 ];
 
-const FluidSimulation = () => {
+const CSC417 = () => {
   return (
     <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-8 sm:py-16 md:py-20">
-      <RouterTitle title="TODO -&gt; Fluid Simulation" />
+      <RouterTitle title="TODO -&gt; CSC417-Physics-based Animation" />
 
       <div className="grid gap-10 md:gap-6 md:grid-cols-2 sm:gap-3 lg:grid-cols-3 lg:gap-10">
-        {fluidSimulation.map((item) => {
+        {homeworks.map((item) => {
           return (
             <div>
               <Image
@@ -50,4 +54,4 @@ const FluidSimulation = () => {
   );
 };
 
-export default FluidSimulation;
+export default CSC417;

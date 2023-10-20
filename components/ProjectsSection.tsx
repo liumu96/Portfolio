@@ -13,31 +13,30 @@ const projects = [
     link: "/projects/physics-tutorial",
   },
   {
+    name: "Fluid Simulation",
+    description: "Uncompleted",
+    image: "/projects/fluid-2d/preview.png",
+    link: "/projects/fluid-simulation",
+  },
+  {
+    name: "Rigid Body Dynamics",
+    description: "Uncompleted",
+    image: "/projects/GAMES103/preview.jpeg",
+    link: "/projects/rigid-body",
+  },
+  {
     name: "CSC417-Physics-based Animation",
     description:
       '<a style="color: rgb(192, 132, 252)" href="https://github.com/dilevin/CSC417-physics-based-animation">CSC417</a> introduces the underlying mathematical and algorithmic techniques required to understand and develop efficient numerical simulations of physical phenomena such as rigid bodies, deformable bodies and fluids. Here is the showcases of the course assignments implemented by C++. The assignments includes: <p>💥 1D mass-springs & 3D mass-springs </p><p> 💥 3d FEM  </p><p> 💥 Finite Elements for Cloth Simulation </p><p> 💥 Rigid Body Simulation',
     image: "/projects/CSC417/animation.gif",
-    link: "/projects/fluid-simulation",
+    link: "/projects/CSC417",
   },
   {
     name: "GAMES103-Physics-based Animation",
     description:
       'This is a Chinese course taught by <a style="color: rgb(192, 132, 252)" href="https://wanghmin.github.io/">HUAMIN WANG</a>. This course includes four area: rigid body simulation, mass-spring systems simulation, FEM-based simulation, fluid simulation. This course is a littele different from the CS417, and the assignments is implemented by C# in Unity.',
-    image: "/projects/GAMES103/preview.jpeg",
-    link: "/projects/fluid-simulation",
-  },
-
-  {
-    name: "Rigid Body",
-    description: "xxxxx",
     image: "/projects/rigid-body/bunny.png",
-    link: "/projects/rigid-body",
-  },
-  {
-    name: "Fluid Simulation",
-    description: "",
-    image: "/projects/fluid-2d/preview.png",
-    link: "/projects/fluid-simulation",
+    link: "/projects/GAMES103",
   },
 ];
 

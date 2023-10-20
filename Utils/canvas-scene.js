@@ -297,7 +297,7 @@ class CanvasScene {
     fluidScene.dt = 1.0 / 60.0;
     fluidScene.numIters = 40;
 
-    var res = 100;
+    let res = 100;
 
     if (sceneNr == 0) res = 50;
     else if (sceneNr == 3) res = 200;
@@ -396,29 +396,34 @@ class CanvasScene {
     const f = this.fluidScene.fluid;
     n = f.numY;
 
-    var cellScale = 1.1;
+    const cellScale = 1.1;
 
-    var h = f.h;
+    const h = f.h;
 
     let minP = f.p[0];
     let maxP = f.p[0];
 
-    for (var i = 0; i < f.numCells; i++) {
+    for (let i = 0; i < f.numCells; i++) {
       minP = Math.min(minP, f.p[i]);
       maxP = Math.max(maxP, f.p[i]);
     }
 
-    const id = this.context.getImageData(0, 0, canvas.width, canvas.height);
+    const id = this.context.getImageData(
+      0,
+      0,
+      this.canvas.width,
+      this.canvas.height
+    );
 
-    var color = [255, 255, 255, 255];
+    let color = [255, 255, 255, 255];
 
     const { fluidScene } = this;
 
-    for (var i = 0; i < f.numX; i++) {
-      for (var j = 0; j < f.numY; j++) {
+    for (let i = 0; i < f.numX; i++) {
+      for (let j = 0; j < f.numY; j++) {
         if (fluidScene.showPressure) {
-          var p = f.p[i * n + j];
-          var s = f.m[i * n + j];
+          const p = f.p[i * n + j];
+          const s = f.m[i * n + j];
           color = getSciColor(p, minP, maxP);
           if (fluidScene.showSmoke) {
             color[0] = Math.max(0.0, color[0] - 255 * s);
@@ -426,7 +431,7 @@ class CanvasScene {
             color[2] = Math.max(0.0, color[2] - 255 * s);
           }
         } else if (fluidScene.showSmoke) {
-          var s = f.m[i * n + j];
+          const s = f.m[i * n + j];
           color[0] = 255 * s;
           color[1] = 255 * s;
           color[2] = 255 * s;
@@ -437,19 +442,20 @@ class CanvasScene {
           color[2] = 0;
         }
 
-        var x = Math.floor(this.cX(i * h));
-        var y = Math.floor(this.cY((j + 1) * h));
-        var cx = Math.floor(this.cScale * cellScale * h) + 1;
-        var cy = Math.floor(this.cScale * cellScale * h) + 1;
+        const x = Math.floor(this.cX(i * h));
+        const y = Math.floor(this.cY((j + 1) * h));
+        const cx = Math.floor(this.cScale * cellScale * h) + 1;
+        const cy = Math.floor(this.cScale * cellScale * h) + 1;
 
         const r = color[0];
         const g = color[1];
         const b = color[2];
+        // console.log(r, g, b);
 
-        for (var yi = y; yi < y + cy; yi++) {
-          var p = 4 * (yi * canvas.width + x);
+        for (let yi = y; yi < y + cy; yi++) {
+          let p = 4 * (yi * this.canvas.width + x);
 
-          for (var xi = 0; xi < cx; xi++) {
+          for (let xi = 0; xi < cx; xi++) {
             id.data[p++] = r;
             id.data[p++] = g;
             id.data[p++] = b;
@@ -675,7 +681,8 @@ class CanvasScene {
 
   drawFlipFluid() {
     const { gl } = this;
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    // gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    gl.clearColor(1.0, 1.0, 1.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
@@ -834,7 +841,7 @@ class CanvasScene {
 
     gl.clear(gl.DEPTH_BUFFER_BIT);
 
-    var diskColor = [1.0, 0.0, 0.0];
+    var diskColor = [0.75, 0.52, 0.98];
 
     gl.useProgram(meshShader);
     gl.uniform2f(

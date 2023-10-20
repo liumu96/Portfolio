@@ -29,18 +29,17 @@ const HeroSection = () => {
             Hi, I&#39;m LiuXing!
           </h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
-            I used to be a{" "}
-            {/* <span className="font-semibold text-purple-500"> */}
+            I am a {/* <span className="font-semibold text-purple-500"> */}
             Frontend Developer
-            {/* </span> */}. I develop 3D visuals, user interfaces and web
-            applications.
+            {/* </span> */}, specializing in the creation of 3D visuals, user
+            interfaces and web applications.
           </p>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             Now I'm a{" "}
             <span className="font-semibold text-purple-500">
               independent learner
             </span>{" "}
-            with a strong interest in
+            ,deeply passionate about
             <span className="font-semibold text-purple-500">
               {" "}
               Computer Graphics
@@ -48,11 +47,13 @@ const HeroSection = () => {
             !
           </p>
           <p className="text-lg mt-4 mb-12 md:text-2xl">
-            I'm looking for a PHD position in Computer Graphics. My research
-            interest is{" "}
+            My research interest is{" "}
             <span className="font-semibold text-purple-500">
-              Physics Animation and Simulation.
+              Physics-based Animation and Simulation
             </span>
+            , and I'm actively seeking a{" "}
+            <span className="font-semibold text-purple-500">PhD</span> position
+            in this field.
           </p>
           <div className="flex md:gap-6 gap-3 flex-row md:justify-start justify-center items-center">
             <a

@@ -45,7 +45,7 @@ const experienceData = [
     location: "Shenzhen, China",
     position: "Frontend Developer",
     description:
-      "Developed the inaugural 3D Application of  SF Freight logistics hub, establishing a groundbreaking precedent within SF Tech. ",
+      "Developed SF Freight Logistics Hub's first inaugural 3D application, establishing a groundbreaking precedent in SF Tech. ",
     icon: (
       <Image
         src="/SFTech.png"
@@ -80,7 +80,8 @@ const experienceData = [
     title: "Independent Learner",
     location: "Xiamen, China",
     description:
-      "Now I'm preparing for PHD application! I learn compter graphics fundamental, programming languages(c++, python), 3D tools(unity, blender), and try to implement some interesting projects.",
+      "I'm preparing for a PHD application, immersing myself in compter graphics fundamental, programming languages(c++, c#), 3D tools(unity, blender).I'm trying to implement some interesting projects to demonstrate my passion for the field.",
+
     // icon: React.createElement(IoIosSchool),
     icon: (
       <Image
@@ -100,7 +101,7 @@ const ExperienceSection = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="my-12 pb-12 md:pt-16 md:pb-24">
+    <div className="my-12 pb-8 md:pt-16 md:pb-8">
       <h1 className="text-center font-bold text-4xl bg-gradient-to-r from-pink-300 to-purple-400 text-transparent bg-clip-text w-auto">
         My Experience
         <hr className="w-6 h-1 mx-auto my-4 bg-purple-600 border-0 rounded"></hr>
