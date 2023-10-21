@@ -24,7 +24,7 @@ const otherSkills = ["Certificate of Legal Professional Qualification"];
 const AboutSection = () => {
   return (
     <section id="about">
-      <div className="my-12 pb-12 md:pt-16 md:pb-24">
+      <div className="my-8 pb-8 md:pt-16 md:pb-8">
         <h1 className="text-center font-bold text-4xl bg-gradient-to-r from-pink-300 to-purple-400 text-transparent bg-clip-text w-auto">
           About Me
           <hr className="w-6 h-1 mx-auto my-4 bg-purple-600 border-0 rounded"></hr>

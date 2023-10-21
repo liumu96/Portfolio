@@ -28,25 +28,27 @@ const HeroSection = () => {
           <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">
             Hi, I&#39;m LiuXing!
           </h1>
-          <p className="text-lg mt-4 mb-6 md:text-2xl">
-            I am a {/* <span className="font-semibold text-purple-500"> */}
-            Frontend Developer
-            {/* </span> */}, specializing in the creation of 3D visuals, user
-            interfaces and web applications.
+          <p className="text-lg mt-4 mb-4 md:text-2xl">
+            I am a{" "}
+            <span className="font-semibold text-purple-500">
+              Frontend Developer
+            </span>
+            , specializing in the creation of 3D visuals, user interfaces and
+            web applications.
           </p>
-          <p className="text-lg mt-4 mb-6 md:text-2xl">
+          <p className="text-lg mt-4 mb-4 md:text-2xl">
             Now I'm a{" "}
             <span className="font-semibold text-purple-500">
               independent learner
             </span>{" "}
-            ,deeply passionate about
+            , deeply passionate about
             <span className="font-semibold text-purple-500">
               {" "}
               Computer Graphics
             </span>
             !
           </p>
-          <p className="text-lg mt-4 mb-12 md:text-2xl">
+          <p className="text-lg mt-4 mb-8 md:text-2xl">
             My research interest is{" "}
             <span className="font-semibold text-purple-500">
               Physics-based Animation and Simulation
