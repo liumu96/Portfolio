@@ -1,23 +1,28 @@
 import React from "react";
 import Image from "next/image";
 import RouterTitle from "@/components/routerTitle";
+import Link from "next/link";
 
 const gamesHW = [
   {
     title: "Angry Bunny",
     previewImage: "/projects/rigid-body/bunny.png",
+    link: "/projects/GAMES103/bunny",
   },
   {
     title: "Cloth Simulation",
     previewImage: "/projects/rigid-body/bunny.png",
+    link: "/projects/GAMES103/cloth",
   },
   {
     title: "Bouncy House",
     previewImage: "/projects/rigid-body/bunny.png",
+    link: "/projects/GAMES103/bouncy-house",
   },
   {
     title: "Pool Ripple",
     previewImage: "/projects/rigid-body/bunny.png",
+    link: "/projects/GAMES103/ripple",
   },
 ];
 
@@ -30,13 +35,15 @@ const CSC417 = () => {
         {gamesHW.map((item) => {
           return (
             <div>
-              <Image
-                src={item.previewImage || "/work.jpg"}
-                alt=""
-                width={300}
-                height={200}
-                className="shadow-2xl mb-2 rounded border border-purple-300"
-              />
+              <Link href={item.link || "https://fluid-2d.vercel.app/"}>
+                <Image
+                  src={item.previewImage}
+                  alt=""
+                  width={300}
+                  height={200}
+                  className="shadow-2xl mb-2 rounded border border-purple-300"
+                />
+              </Link>
               {item.title}
             </div>
           );

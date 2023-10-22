@@ -1,0 +1,3 @@
+class FluidParticles {
+  constructor() {}
+}

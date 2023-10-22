@@ -39,7 +39,7 @@ const CSC417 = () => {
           return (
             <div>
               <Image
-                src={item.previewImage || "/work.jpg"}
+                src={item.previewImage}
                 alt=""
                 width={300}
                 height={200}

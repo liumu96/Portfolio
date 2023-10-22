@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import RouterTitle from "@/components/routerTitle";
+import Link from "next/link";
 
 const fluidSimulation = [
   {
@@ -8,7 +9,8 @@ const fluidSimulation = [
     previewImage: "/projects/fluid-2d/preview.png",
   },
   {
-    title: "FLIP Water Simulator",
+    title: "PIC-FLIP Fluid Simulator",
+    link: "/projects/fluid-simulation/pic-flip-simulation",
     previewImage: "/projects/fluid-2d/preview.png",
   },
   {
@@ -17,10 +19,6 @@ const fluidSimulation = [
   },
   {
     title: "Smoke Simulation",
-    previewImage: "/projects/fluid-2d/preview.png",
-  },
-  {
-    title: "Cloth Simulation",
     previewImage: "/projects/fluid-2d/preview.png",
   },
 ];
@@ -34,13 +32,16 @@ const FluidSimulation = () => {
         {fluidSimulation.map((item) => {
           return (
             <div>
-              <Image
-                src={item.previewImage || "/work.jpg"}
-                alt=""
-                width={300}
-                height={200}
-                className="shadow-2xl mb-2 rounded border border-purple-300"
-              />
+              <Link href={item.link || "https://fluid-2d.vercel.app/"}>
+                <Image
+                  src={item.previewImage}
+                  alt=""
+                  width={300}
+                  height={200}
+                  className="shadow-2xl mb-2 rounded border border-purple-300"
+                />
+              </Link>
+
               {item.title}
             </div>
           );

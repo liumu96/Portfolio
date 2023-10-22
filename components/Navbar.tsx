@@ -50,7 +50,12 @@ const Navbar = () => {
             <Link href="/" className="scale-50">
               <div className="container flex items-center space-x-2 ">
                 <h2 className="text-2xl font-bold">
-                  <Image src="/logo.svg" height={60} width={60} alt="logo" />
+                  <Image
+                    src="/logo/logo.svg"
+                    height={60}
+                    width={60}
+                    alt="logo"
+                  />
                 </h2>
               </div>
             </Link>

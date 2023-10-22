@@ -19,7 +19,7 @@ const experienceData = [
     location: "Nanjing, China",
     description: "B.S. in Microelectronics ",
     GPA: "GPA: (3.9/5.0) Ranking: 1/27",
-    icon: <Image src="/nuaa.png" alt="img" height={80} width={80} />,
+    icon: <Image src="/experience/nuaa.png" alt="img" height={80} width={80} />,
     date: "2012.09-2016.06",
     age: 16,
   },
@@ -30,7 +30,7 @@ const experienceData = [
     GPA: "GPA: (3.5/4.0) No Ranking",
     icon: (
       <Image
-        src="/nudt.png"
+        src="/experience/nudt.png"
         alt="img"
         height={80}
         width={80}
@@ -48,7 +48,7 @@ const experienceData = [
       "Developed SF Freight Logistics Hub's first inaugural 3D application, establishing a groundbreaking precedent in SF Tech. ",
     icon: (
       <Image
-        src="/SFTech.png"
+        src="/experience/SFTech.png"
         alt="img"
         height={60}
         width={60}
@@ -66,7 +66,7 @@ const experienceData = [
       "Responsible for leading the development of digital twin tools and applications for data centers. ",
     icon: (
       <Image
-        src="/TX.png"
+        src="/experience/TX.png"
         alt="img"
         height={30}
         width={30}
@@ -85,7 +85,7 @@ const experienceData = [
     // icon: React.createElement(IoIosSchool),
     icon: (
       <Image
-        src="/work1.jpeg"
+        src="/experience/work1.jpeg"
         alt="img"
         height={80}
         width={80}

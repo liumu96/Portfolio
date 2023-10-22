@@ -8,7 +8,7 @@ export default function Head() {
         content="Liu Xing's Portfolio for Computer Graphics"
       />
       <meta name="author" content="Liu Xing"></meta>
-      <link rel="icon" href="/logo.svg" />
+      <link rel="icon" href="/logo/logo.svg" />
     </>
   );
 }

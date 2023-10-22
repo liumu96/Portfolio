@@ -74,9 +74,9 @@ const physicsDemos = [
     previewImage: "/projects/physics-tutorial/smoke-simulation.gif",
   },
   {
-    title: "FLIP Water Simulation",
-    link: "/projects/physics-tutorial/flip-water-simulation",
-    previewImage: "/projects/physics-tutorial/spatial-hashing.gif",
+    title: "FLIP Fluid Simulation",
+    link: "/projects/physics-tutorial/flip-fluid-simulation",
+    previewImage: "/projects/physics-tutorial/flip-fluid.gif",
   },
   {
     title: "Height-Field Water Simulation",
@@ -90,19 +90,23 @@ const PhysicsTutorial = () => {
     <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-8 sm:py-24 md:py-20 sm:px-8 px-8">
       <RouterTitle title="Physics Tutorial" />
       <span className="mb-8 mt-2">
-        The demos on this page are created using the principles and techniques
-        I've learned from{" "}
+        This project, inspired by{" "}
+        <span className="font-bold">Matthias Müller's</span>{" "}
         <a
           href="https://matthias-research.github.io/pages/tenMinutePhysics/index.html"
           className="text-purple-400"
         >
           Ten Minute Physics
         </a>{" "}
-        tutorial course.
-        <p>
+        tutorial, focuses on physically based simulation concepts like{" "}
+        <p className="text-purple-400">
+          position-based dynamics, soft body simulation, cloth simulation, and
+          fluid simulation.
+        </p>
+        {/* <p>
           While the original code was in HTML, I've taken it a step further by
           implementing these demos in modular form.
-        </p>{" "}
+        </p>{" "} */}
         {/* Explore these hands-on projects to witness how I've translated the
         concepts into real-world applications. Each demo is a testament to my
         dedication and expertise in physics-based animation and simulation. */}
@@ -116,7 +120,7 @@ const PhysicsTutorial = () => {
             >
               <Link href={demo.link || "/projects/physics-tutorial"}>
                 <Image
-                  src={demo.previewImage || "/work.jpg"}
+                  src={demo.previewImage}
                   alt=""
                   width={300}
                   height={200}
