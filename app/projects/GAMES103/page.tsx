@@ -16,8 +16,8 @@ const gamesHW = [
   },
   {
     title: "Bouncy House",
-    previewImage: "/projects/rigid-body/bunny.png",
-    link: "/projects/GAMES103/bouncy-house",
+    previewImage: "/projects/GAMES103/house.gif",
+    link: "/projects/GAMES103/house",
   },
   {
     title: "Pool Ripple",

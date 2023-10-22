@@ -44,7 +44,7 @@ const AboutSection = () => {
             <p className="mb-1">
               With a background in 3D visuals, user interfaces, and web
               applications, I'm now passionately exploring the world of computer
-              graphics, with a keen focus on
+              graphics, with a keen focus on{" "}
               <span className="font-bold text-purple-400">
                 physics-based animation and simulation
               </span>
