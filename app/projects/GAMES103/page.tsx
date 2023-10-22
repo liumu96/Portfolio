@@ -21,7 +21,7 @@ const gamesHW = [
   },
   {
     title: "Pool Ripple",
-    previewImage: "/projects/rigid-body/bunny.png",
+    previewImage: "/projects/GAMES103/ripple.gif",
     link: "/projects/GAMES103/ripple",
   },
 ];
@@ -32,19 +32,21 @@ const CSC417 = () => {
       <RouterTitle title="TODO -&gt; GAMES103-Physics-based Animation" />
 
       <div className="grid gap-10 md:gap-6 md:grid-cols-2 sm:gap-3 lg:grid-cols-3 lg:gap-10">
-        {gamesHW.map((item) => {
+        {gamesHW.map((item, idx) => {
           return (
-            <div>
+            <div key={idx} className="mt-1">
               <Link href={item.link || "https://fluid-2d.vercel.app/"}>
-                <Image
+                <img
                   src={item.previewImage}
                   alt=""
                   width={300}
                   height={200}
-                  className="shadow-2xl mb-2 rounded border border-purple-300"
+                  // className="rounded-lg shadow-lg"
+                  style={{ height: "98%", objectFit: "cover" }}
+                  className="shadow-lg rounded border border-purple-300"
                 />
               </Link>
-              {item.title}
+              <div className=" px-2 py-2 mt-1 ">{item.title}</div>
             </div>
           );
         })}
