@@ -881,9 +881,9 @@ class CanvasScene {
     this.canvas.height = window.innerHeight - 300;
 
     const simMinWidth = 20.0;
-    this.cScale = Math.min(canvas.width, canvas.height) / simMinWidth;
-    this.simWidth = canvas.width / this.cScale;
-    this.simHeight = canvas.height / this.cScale;
+    this.cScale = Math.min(this.canvas.width, this.canvas.height) / simMinWidth;
+    this.simWidth = this.canvas.width / this.cScale;
+    this.simHeight = this.canvas.height / this.cScale;
   }
 
   cX(pos) {

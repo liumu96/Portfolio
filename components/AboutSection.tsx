@@ -52,9 +52,9 @@ const AboutSection = () => {
             </p>
             <p className="mb-1">
               I'm actively preparing for a{" "}
-              <span className="font-bold text-purple-400">PhD</span> application
-              in this exciting field. If you have any study advice or{" "}
-              <span className="font-bold text-purple-400">PhD</span>{" "}
+              <span className="font-bold text-purple-400">Ph.D.</span>{" "}
+              application in this exciting field. If you have any study advice
+              or <span className="font-bold text-purple-400">Ph.D.</span>{" "}
               opportunities, I'd love to connect. Let's embark on this
               intriguing journey together.
             </p>

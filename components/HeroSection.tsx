@@ -54,8 +54,8 @@ const HeroSection = () => {
               Physics-based Animation and Simulation
             </span>
             , and I'm actively seeking a{" "}
-            <span className="font-semibold text-purple-500">PhD</span> position
-            in this field.
+            <span className="font-semibold text-purple-500">Ph.D.</span>{" "}
+            position in this field.
           </p>
           <div className="flex md:gap-6 gap-3 flex-row md:justify-start justify-center items-center">
             <a
