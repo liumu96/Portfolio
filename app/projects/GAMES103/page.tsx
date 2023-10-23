@@ -1,12 +1,11 @@
 import React from "react";
-import Image from "next/image";
 import RouterTitle from "@/components/routerTitle";
 import Link from "next/link";
 
 const gamesHW = [
   {
     title: "Angry Bunny",
-    previewImage: "/projects/rigid-body/bunny.png",
+    previewImage: "/projects/GAMES103/impulse.gif",
     link: "/projects/GAMES103/bunny",
   },
   {
