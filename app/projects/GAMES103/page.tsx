@@ -10,7 +10,7 @@ const gamesHW = [
   },
   {
     title: "Cloth Simulation",
-    previewImage: "/projects/rigid-body/bunny.png",
+    previewImage: "/projects/GAMES103/cloth.gif",
     link: "/projects/GAMES103/cloth",
   },
   {
@@ -28,7 +28,7 @@ const gamesHW = [
 const CSC417 = () => {
   return (
     <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-8 sm:py-16 md:py-20">
-      <RouterTitle title="TODO -&gt; GAMES103-Physics-based Animation" />
+      <RouterTitle title="GAMES103-Physics-based Animation" />
 
       <div className="grid gap-10 md:gap-6 md:grid-cols-2 sm:gap-3 lg:grid-cols-3 lg:gap-10">
         {gamesHW.map((item, idx) => {
