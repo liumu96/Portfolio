@@ -42,7 +42,7 @@ const AboutSection = () => {
               <span className="font-bold text-purple-400">explorer</span>.
             </p>
             <p className="mb-1">
-              With a background in 3D visuals, user interfaces, and web
+              With a background in 3D visualization, user interfaces, and web
               applications, I'm now passionately exploring the world of computer
               graphics, with a keen focus on{" "}
               <span className="font-bold text-purple-400">

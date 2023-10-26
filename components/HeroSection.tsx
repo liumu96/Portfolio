@@ -33,8 +33,8 @@ const HeroSection = () => {
             <span className="font-semibold text-purple-500">
               Frontend Developer
             </span>
-            , specializing in the creation of 3D visuals, user interfaces and
-            web applications.
+            , specializing in the creation of 3D visualization, user interfaces
+            and web applications.
           </p>
           <p className="text-lg mt-4 mb-4 md:text-2xl">
             Now I'm a{" "}
