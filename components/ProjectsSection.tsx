@@ -26,17 +26,17 @@ const projects = [
     image: "/projects/CSC417/animation.gif",
     link: "/projects/CSC417",
   },
+  // {
+  //   name: "Fluid Simulation",
+  //   description: "Uncompleted",
+  //   image: "/projects/fluid-2d/preview.png",
+  //   link: "/projects/fluid-simulation",
+  // },
   {
-    name: "Fluid Simulation",
-    description: "Uncompleted",
-    image: "/projects/fluid-2d/preview.png",
-    link: "/projects/fluid-simulation",
-  },
-  {
-    name: "Rigid Body Dynamics",
+    name: "Physics-based Animation",
     description: "Uncompleted",
     image: "/projects/GAMES103/preview.jpeg",
-    link: "/projects/rigid-body",
+    link: "/projects/physics-based-animation",
   },
 ];
 

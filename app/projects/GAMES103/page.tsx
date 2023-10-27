@@ -34,7 +34,7 @@ const CSC417 = () => {
         {gamesHW.map((item, idx) => {
           return (
             <div key={idx} className="mt-1">
-              <Link href={item.link || "https://fluid-2d.vercel.app/"}>
+              <Link href={item.link}>
                 <img
                   src={item.previewImage}
                   alt=""
