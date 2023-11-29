@@ -5,6 +5,9 @@ import { PiGraduationCapLight, PiBriefcaseLight } from "react-icons/pi";
 const skills = [
   { skill: "C++" },
   { skill: "Python" },
+  { skill: "OpenGL" },
+  { skill: "C#" },
+  { skill: "Blender" },
   { skill: "React" },
   { skill: "Vue" },
   { skill: "JavaScript" },
