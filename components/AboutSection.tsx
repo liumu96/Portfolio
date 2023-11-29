@@ -36,27 +36,28 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p className="mb-1">
-              Hi, my name is LiuXing and I am a{" "}
-              <span className="font-bold">{"highly ambitious"}</span>,
+              Hello, I'm LiuXing — an{" "}
+              <span className="font-bold">{"ambitious"}</span>,
               <span className="font-bold">{" self-motivated"}</span>{" "}
-              <span className="font-bold text-purple-400">explorer</span>.
+              <span className="font-bold text-purple-400">explorer</span> with a
+              background in 3D visualization, user interfaces, and web
+              applications.
             </p>
             <p className="mb-1">
-              With a background in 3D visualization, user interfaces, and web
-              applications, I'm now passionately exploring the world of computer
-              graphics, with a keen focus on{" "}
+              My current passion lies in the captivating realm of computer
+              graphics, where I'm delving deep into{" "}
               <span className="font-bold text-purple-400">
                 physics-based animation and simulation
               </span>
-              .
+              .This journey has fueled my ambition to pursue a Ph.D. in this
+              exciting field.
             </p>
             <p className="mb-1">
-              I'm actively preparing for a{" "}
+              As I actively prepare for{" "}
               <span className="font-bold text-purple-400">Ph.D.</span>{" "}
-              application in this exciting field. If you have any study advice
-              or <span className="font-bold text-purple-400">Ph.D.</span>{" "}
-              opportunities, I'd love to connect. Let's embark on this
-              intriguing journey together.
+              application in this exciting field. I welcome any study advice or
+              information about potential opportunities. Let's connect and
+              embark on this intriguing journey together.
             </p>
             <br />
             <a

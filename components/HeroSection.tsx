@@ -28,20 +28,24 @@ const HeroSection = () => {
           <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">
             Hi, I&#39;m LiuXing!
           </h1>
+          {/* I'm a Frontend Developer with a passion for 3D visualization and user interfaces. 
+         Currently fascinated by Computer Graphics, 
+         I specialize in Physics-based Animation and Simulation. 
+         Actively seeking a Ph.D. position to further explore the intersection of physics and technology. 
+         Let's connect and explore the future of interactive experiences together! */}
           <p className="text-lg mt-4 mb-4 md:text-2xl">
-            I am a{" "}
+            I'm a{" "}
             <span className="font-semibold text-purple-500">
               Frontend Developer
             </span>
-            , specializing in the creation of 3D visualization, user interfaces
-            and web applications.
+            , specializing in 3D visualization and user interfaces.
           </p>
           <p className="text-lg mt-4 mb-4 md:text-2xl">
-            Now I'm a{" "}
+            Currently I'm an{" "}
             <span className="font-semibold text-purple-500">
               independent learner
             </span>{" "}
-            , deeply passionate about
+            , deeply fascinated by
             <span className="font-semibold text-purple-500">
               {" "}
               Computer Graphics
@@ -52,11 +56,14 @@ const HeroSection = () => {
             My research interest is{" "}
             <span className="font-semibold text-purple-500">
               Physics-based Animation and Simulation
-            </span>
+            </span>{" "}
+            &{" "}
+            <span className="font-semibold text-purple-500">Visualization</span>
             , and I'm actively seeking a{" "}
             <span className="font-semibold text-purple-500">Ph.D.</span>{" "}
             position in this field.
           </p>
+
           <div className="flex md:gap-6 gap-3 flex-row md:justify-start justify-center items-center">
             <a
               href="/CV_liuxing.pdf"
