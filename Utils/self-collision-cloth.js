@@ -337,14 +337,14 @@ class SelfCollisionCloth {
     }
   }
 
-  moveGrabbed(pos, vel) {
+  moveGrabbed(pos) {
     if (this.grabId >= 0) {
       var p = [pos.x, pos.y, pos.z];
       vecCopy(this.pos, this.grabId, p, 0);
     }
   }
 
-  endGrab(pos, vel) {
+  endGrab(vel) {
     if (this.grabId >= 0) {
       this.invMass[this.grabId] = this.grabInvMass;
       var v = [vel.x, vel.y, vel.z];

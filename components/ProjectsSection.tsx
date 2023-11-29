@@ -16,7 +16,7 @@ const projects = [
     name: "GAMES103-Physics-based Animation",
     description:
       'This project is based on GAMES103, a Chinese course taught by <a style="color: rgb(192, 132, 252)" href="https://wanghmin.github.io/">HUAMIN WANG</a>. The course covers four areas: rigid body simulation, mass-spring systems, FEM-based simulation, and fluid simulation. It differs from CSC417 and involves implementing assignments using <span style="color: rgb(192, 132, 252)">C#</span> in Unity. I\'ve also exported the project as a <span style="color: rgb(192, 132, 252)">WebGL</span> build, allowing for web-based interaction.',
-    image: "/projects/GAMES103/impulse.gif",
+    image: "/projects/GAMES103/cloth.gif",
     link: "/projects/GAMES103",
   },
   {
