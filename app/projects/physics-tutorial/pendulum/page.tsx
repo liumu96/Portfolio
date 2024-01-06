@@ -5,12 +5,15 @@ import CanvasScene from "@/Utils/canvas-scene";
 import { IoArrowBackOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { VscDebugRestart } from "react-icons/vsc";
-import { FaPlay, FaStepForward } from "react-icons/fa";
+import { FaPlay, FaPauseCircle, FaStepForward } from "react-icons/fa";
+import MarkdownText from "@/components/MarkdownText";
+import description from "@/public/notes/pendulum.md";
 
 const CannonBall2D = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const router = useRouter();
   const [canvasScene, setCanvasScene] = useState<any>();
+  const [state, setState] = useState<string>("pause");
   useEffect(() => {
     if (canvasRef.current) {
       const canvasScene = new CanvasScene(canvasRef.current);
@@ -18,7 +21,6 @@ const CannonBall2D = () => {
       canvasScene.setupPendulumScene(0);
       canvasScene.pbdUpdate();
       setCanvasScene(canvasScene);
-
       document.addEventListener("keydown", (event) => {
         if (event.key == "s") canvasScene.step();
       });
@@ -28,7 +30,13 @@ const CannonBall2D = () => {
     canvasScene.setupPendulumScene(Math.random() * 6);
   };
   const run = () => {
-    canvasScene.run();
+    if (state == "pause") {
+      canvasScene.run();
+      setState("run");
+    } else {
+      canvasScene.pause();
+      setState("pause");
+    }
   };
   const step = () => {
     canvasScene.step();
@@ -50,7 +58,7 @@ const CannonBall2D = () => {
             onClick={run}
             className="flex mr-2 items-center border-purple-300 border justify-center flex-1 bg-white shadow-md rounded h-2/3"
           >
-            <FaPlay />
+            {state == "pause" ? <FaPlay /> : <FaPauseCircle />}
           </button>
           <button
             type="button"
@@ -85,6 +93,7 @@ const CannonBall2D = () => {
           height: "calc(100vh - 300px)",
         }}
       ></canvas>
+      <MarkdownText mdtext={description}></MarkdownText>
     </div>
   );
 };

@@ -207,7 +207,7 @@ class CanvasScene {
     var angles = [0.5 * Math.PI, Math.PI, Math.PI, Math.PI, Math.PI];
     var lengths = [];
     var masses = [];
-    console.log(Math.floor(sceneNr % 6));
+
     switch (Math.floor(sceneNr % 6)) {
       case 0: {
         lengths = [0.15, 0.15, 0.15];

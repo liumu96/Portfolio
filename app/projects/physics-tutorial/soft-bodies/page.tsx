@@ -6,6 +6,8 @@ import { IoArrowBackOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { FaPlay, FaPauseCircle, FaPlus, FaMinus } from "react-icons/fa";
 import { VscDebugRestart } from "react-icons/vsc";
+import MarkdownText from "@/components/MarkdownText";
+import description from "@/public/notes/soft-body.md";
 
 const CannonBall3D = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -97,6 +99,7 @@ const CannonBall3D = () => {
           height: "calc(100vh - 300px)",
         }}
       ></canvas>
+      <MarkdownText mdtext={description}></MarkdownText>
     </div>
   );
 };
