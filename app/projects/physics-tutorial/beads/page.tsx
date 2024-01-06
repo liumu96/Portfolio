@@ -6,6 +6,8 @@ import { IoArrowBackOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { VscDebugRestart } from "react-icons/vsc";
 import { FaPlay, FaStepForward } from "react-icons/fa";
+import MarkdownText from "@/components/MarkdownText";
+import description from "@/public/notes/multiple-beads.md";
 
 const CannonBall2D = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -62,6 +64,7 @@ const CannonBall2D = () => {
           height: "calc(100vh - 300px)",
         }}
       ></canvas>
+      <MarkdownText mdtext={description}></MarkdownText>
     </div>
   );
 };
