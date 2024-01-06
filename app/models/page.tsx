@@ -51,7 +51,7 @@ const models = [
   {
     previewPath: "/models/SoftBody-01/render.mp4",
     previewImage: "/models/SoftBody-01/preview.png",
-    categories: ["Smoke"],
+    categories: ["Soft Body"],
     type: "video",
     description: "",
   },

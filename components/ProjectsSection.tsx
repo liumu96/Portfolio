@@ -9,7 +9,7 @@ const projects = [
     name: "Ten Minutes Physics Tutorial",
     description:
       'This project, inspired by Matthias Müller\'s <a href="https://matthias-research.github.io/pages/tenMinutePhysics/index.html" style="color: rgb(192, 132, 252)">"Ten Minutes Physics"</a> tutorial, focuses on physically based simulation concepts like <span style="color: rgb(192, 132, 252)">position-based dynamics, soft body simulation, cloth simulation, and fluid simulation</span>. While Müller used JavaScript, I enhanced the implementation by using the <span style="color: rgb(192, 132, 252)">React</span> module, deepening my understanding of these concepts and honing my coding skills.',
-    image: "/projects/physics-tutorial/preview.png",
+    image: "/projects/physics-tutorial/cloth-simulation.gif",
     link: "/projects/physics-tutorial",
   },
   {

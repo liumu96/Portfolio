@@ -52,6 +52,8 @@ class CanvasScene {
       beads: [],
       bead: null,
       analyticBead: null,
+      pbdForce: 0,
+      analyticForce: 0,
       // for pendulum
       numSubSteps: 10000,
       pendulumPBD: null,
@@ -993,6 +995,29 @@ class CanvasScene {
     this.physicsScene.paused = false;
   }
 
+  pause() {
+    this.physicsScene.paused = true;
+  }
+  /**
+   * GET & SET
+   */
+  getSubSteps() {
+    return this.physicsScene.numSteps;
+  }
+
+  setSubSteps(val) {
+    this.physicsScene.numSteps = val;
+  }
+
+  getPBDForces() {
+    console.log(1111);
+    return this.physicsScene.pbdForce;
+  }
+
+  getAnalyticForces() {
+    return this.physicsScene.analyticForce;
+  }
+
   pbdSimulate() {
     const { physicsScene } = this;
     if (physicsScene.paused) return;
@@ -1026,11 +1051,11 @@ class CanvasScene {
             physicsScene.wireRadius
           );
 
-          const force = Math.abs(lambda / sdt / sdt);
+          physicsScene.pbdForce = Math.abs(lambda / sdt / sdt);
 
           physicsScene.bead.endStep(sdt);
 
-          const analyticForce = physicsScene.analyticBead.simulate(
+          physicsScene.analyticForce = physicsScene.analyticBead.simulate(
             sdt,
             -physicsScene.gravity.y
           );
