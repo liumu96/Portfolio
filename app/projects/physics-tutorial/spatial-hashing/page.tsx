@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import { FaPlay, FaPauseCircle } from "react-icons/fa";
 import { BiShow, BiHide } from "react-icons/bi";
 import { VscDebugRestart } from "react-icons/vsc";
+import MarkdownText from "@/components/MarkdownText";
+import description from "@/public/notes/spatial-hashing.md";
 
 const CannonBall3D = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -89,6 +91,7 @@ const CannonBall3D = () => {
           height: "calc(100vh - 300px)",
         }}
       ></canvas>
+      <MarkdownText mdtext={description}></MarkdownText>
     </div>
   );
 };
