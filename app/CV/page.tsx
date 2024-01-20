@@ -1,6 +1,3 @@
-import AboutSection from "@/components/AboutSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import SectionHeading from "@/components/SectionHeading";
 import PDFViewer from "@/components/PDFViewer";
 import React from "react";
 

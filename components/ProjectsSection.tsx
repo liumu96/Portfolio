@@ -13,6 +13,13 @@ const projects = [
     link: "/projects/physics-tutorial",
   },
   {
+    name: "ThreeJS Gallery",
+    description:
+      "Welcome to my 3D Web Project, a collection of interactive web pages featuring various three.js effects and animations. This ongoing project showcases the capabilities of three.js and explores the possibilities of 3D graphics on the web.",
+    image: "/projects/three-gallery/preview.png",
+    link: "https://three-world-gallery.vercel.app/",
+  },
+  {
     name: "GAMES103-Physics-based Animation",
     description:
       'This project is based on GAMES103, a Chinese course taught by <a style="color: rgb(192, 132, 252)" href="https://wanghmin.github.io/">HUAMIN WANG</a>. The course covers four areas: rigid body simulation, mass-spring systems, FEM-based simulation, and fluid simulation. It differs from CSC417 and involves implementing assignments using <span style="color: rgb(192, 132, 252)">C#</span> in Unity. I\'ve also exported the project as a <span style="color: rgb(192, 132, 252)">WebGL</span> build, allowing for web-based interaction.',
