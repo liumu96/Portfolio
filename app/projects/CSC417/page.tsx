@@ -6,18 +6,20 @@ import Link from "next/link";
 const homeworks = [
   {
     title: "1d-mass-spring",
-    previewImage: "/projects/CSC417/a1-mass-spring-1d/mass-spring-1d.gif",
+    // previewImage: "/projects/CSC417/a1-mass-spring-1d/mass-spring-1d.gif",
+    previewImage: "/projects/CSC417/a1-mass-spring-1d/preview.gif",
     link: "/projects/CSC417/a1-mass-spring-1d",
   },
   {
     title: "3d-mass-spring",
-    previewImage: "/projects/CSC417/mass-spring-3d.gif",
-    link: "/projects/CSC417/a1-mass-spring-1d",
+    // previewImage: "/projects/CSC417/mass-spring-3d.gif",
+    previewImage: "/projects/CSC417/12-mass-spring-2d/preview.gif",
+    link: "https://github.com/liumu96/CSC417-homeworks/blob/main/a2-mass-spring-3d/README.md",
   },
   {
     title: "FEM",
-    previewImage: "/projects/CSC417/animation.gif",
-    link: "/projects/CSC417/a1-mass-spring-1d",
+    previewImage: "/projects/CSC417/a3-fem-3d/preview.gif",
+    link: "https://github.com/liumu96/CSC417-homeworks/blob/main/a3-finite-elements-3d/README.md",
   },
   {
     title: "FEM-cloth",
