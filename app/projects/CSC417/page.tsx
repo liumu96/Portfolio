@@ -13,7 +13,7 @@ const homeworks = [
   {
     title: "3d-mass-spring",
     // previewImage: "/projects/CSC417/mass-spring-3d.gif",
-    previewImage: "/projects/CSC417/12-mass-spring-2d/preview.gif",
+    previewImage: "/projects/CSC417/a2-mass-spring-2d/preview.gif",
     link: "https://github.com/liumu96/CSC417-homeworks/blob/main/a2-mass-spring-3d/README.md",
   },
   {
@@ -23,25 +23,25 @@ const homeworks = [
   },
   {
     title: "FEM-cloth",
-    previewImage: "/projects/CSC417/animation.gif",
-    link: "/projects/CSC417/a1-mass-spring-1d",
+    previewImage: "/projects/CSC417/a4-fem-cloth/preview.gif",
+    link: "https://github.com/liumu96/CSC417-homeworks/blob/main/a4-cloth-simulation/README.md",
   },
   {
     title: "rigid-body",
-    previewImage: "/projects/CSC417/animation.gif",
-    link: "/projects/CSC417/a1-mass-spring-1d",
+    previewImage: "/projects/CSC417/a5-rigid-body/preview.gif",
+    link: "https://github.com/liumu96/CSC417-homeworks/blob/main/a5-rigid-bodies/README.md",
   },
   {
     title: "rigid-body-collision",
-    previewImage: "/projects/CSC417/animation.gif",
-    link: "/projects/CSC417/a1-mass-spring-1d",
+    previewImage: "/projects/CSC417/a6-rigid-body-collision/preview.gif",
+    link: "https://github.com/liumu96/CSC417-homeworks/blob/main/a6-rigid-contact/README.md",
   },
 ];
 
 const CSC417 = () => {
   return (
     <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-8 sm:py-16 md:py-20">
-      <RouterTitle title="Ing -&gt; CSC417-Physics-based Animation" />
+      <RouterTitle title="CSC417-Physics-based Animation" />
 
       <div className="grid gap-10 md:gap-6 md:grid-cols-2 sm:gap-3 lg:grid-cols-3 lg:gap-10">
         {homeworks.map((item, idx) => {

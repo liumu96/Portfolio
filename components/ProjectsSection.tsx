@@ -40,8 +40,8 @@ const projects = [
   //   link: "/projects/fluid-simulation",
   // },
   {
-    name: "Physics-based Animation",
-    description: "Uncompleted",
+    name: "Paper Reproduction",
+    description: "Ing",
     image: "/projects/GAMES103/preview.jpeg",
     link: "/projects/physics-based-animation",
   },
