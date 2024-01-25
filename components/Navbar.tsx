@@ -25,10 +25,14 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Projects",
     route: "/projects",
   },
+  // {
+  //   label: "Blogs",
+  //   // route: "/blogs", // todo
+  //   route: "https://blogs-liuxing.vercel.app",
+  // },
   {
-    label: "Blogs",
-    // route: "/blogs", // todo
-    route: "https://blogs-liuxing.vercel.app",
+    label: "Posts",
+    route: "/posts", // todo
   },
   {
     label: "Models",

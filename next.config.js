@@ -5,6 +5,7 @@ const nextConfig = {
   // experimental: {
   //   appDir: true,
   // },
+  webpack5: true,
   images: {
     formats: ["image/avif", "image/webp"],
     dangerouslyAllowSVG: true,
@@ -19,6 +20,11 @@ const nextConfig = {
   },
   webpack: (config) => {
     config.resolve.alias.canvas = false;
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      path: false,
+    };
 
     return Object.assign({}, config, {
       module: Object.assign({}, config.module, {

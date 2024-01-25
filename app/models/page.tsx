@@ -86,7 +86,7 @@ const Models = () => {
       <span className="font-bold text-4xl bg-gradient-to-r from-pink-300 to-purple-400 text-transparent bg-clip-text px-6 py-3 rounded-md">
         Blender Physics Animation
       </span>
-      <p className="mb-8 mt-2">
+      <p className="mb-8 mt-2 font-bold text-lg">
         Here are some physics animation effects I've created in Blender, which
         help to achieve a basic level of realism.
       </p>
@@ -121,7 +121,7 @@ const Models = () => {
                   return (
                     <div
                       key={idx}
-                      className="bg-purple-600 mr-1 mt-1 px-2 py-2 text-white rounded"
+                      className="bg-purple-400 mr-1 mt-1 px-2 py-2 text-white rounded"
                     >
                       {category}
                     </div>
