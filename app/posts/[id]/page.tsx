@@ -1,8 +1,8 @@
 import BlogLayout from "@/components/PostLayout";
 import { getAllPostIds, getPostData } from "@/lib/posts";
-import ReactMarkdown from "react-markdown";
+import MarkdownText from "@/components/MarkdownText";
+
 import React from "react";
-import "katex/dist/katex.min.css";
 
 async function getData({ params }: { params: { id: string } }) {
   const postData: any = await getPostData(params.id);
@@ -16,9 +16,7 @@ export default async function Post({ params }: { params: { id: string } }) {
   return (
     <BlogLayout pagesInfo={postData.pagesInfo}>
       <br />
-      <ReactMarkdown className=" w-full prose md:prose-lg lg:prose-xl dark:text-neutral-100 dark:prose-h3:text-neutral-100">
-        {postData.markdownContent}
-      </ReactMarkdown>
+      <MarkdownText mdtext={postData.markdownContent} />
       {/* {postData.date} */}
     </BlogLayout>
   );
