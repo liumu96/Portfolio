@@ -18,7 +18,7 @@ const skills = [
 const languageSkills = [
   { language: "Chinese", level: "Mother language" },
   { language: "English", level: "IELTS 7.5" },
-  { language: "Deutsch", level: "A2" },
+  { language: "Deutsch", level: "A1" },
   { language: "한국어", level: "TOPIK I" },
 ];
 

@@ -12,10 +12,24 @@ import {
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const MarkdownText = ({ mdtext }: { mdtext: string }) => {
+  const P = ({ children }: { children?: any }) => (
+    <p className="md-post-p">{children}</p>
+  );
+  const Li = ({ children }: { children?: any }) => (
+    <li className="md-post-li">{children}</li>
+  );
+  const H4 = ({ children }: { children?: any }) => (
+    <h4 className="md-post-h4">{children}</h4>
+  );
+  const Hr = () => <hr className="md-post-hr" />;
   return (
-    <article className="content text-left mt-3">
+    <article className="content text-left mt-3 font-Merriweather">
       <ReactMarkdown
         components={{
+          p: P,
+          li: Li,
+          h4: H4,
+          hr: Hr,
           code(props) {
             const { children, className, node, ...rest } = props;
             const match = /language-(\w+)/.exec(className || "");

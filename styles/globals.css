@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
 
 :root {
   --white: #ecf0f2;
@@ -47,6 +48,30 @@
   overflow-x: inherit;
   > section {
     border-radius: 5px;
+  }
+}
+
+.md-post {
+  &-p {
+    font-size: 1.1em;
+  }
+
+  &-li {
+    list-style-type: none;
+  }
+
+  &-h4 {
+    font-size: 1.5em;
+    color: red;
+  }
+
+  &-hr {
+    width: 200px;
+    height: 20px;
+    margin: 60px auto;
+    background: radial-gradient(circle closest-side, #d4d4d4 98%, #0000) 0 /
+      calc(100% / 5) 100%;
+    border: none;
   }
 }
 

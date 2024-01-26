@@ -23,7 +23,7 @@ export default async function Blogs() {
         {allPosts.map(({ id, comment, title, tags = [], preview }) => {
           return (
             <PostCard>
-              <Link href={`/posts/${id}`}>
+              <Link href={`/posts/${id}`} className="font-Merriweather">
                 <div
                   key={id}
                   className="flex flex-row justify-start items-center"
@@ -41,7 +41,7 @@ export default async function Blogs() {
                     )}
                   </div>
                   <div>
-                    <div className="text-4xl font-bold mb-6">{title}</div>
+                    <div className="text-2xl font-bold mb-6">{title}</div>
                     <div>{comment}</div>
                     {/* Categories */}
                     <div className="flex mt-4">
