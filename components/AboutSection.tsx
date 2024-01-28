@@ -38,7 +38,54 @@ const AboutSection = () => {
             <h1 className="text-center text-2xl font-bold mb-6 md:text-left">
               Get to know me!
             </h1>
-            <p className="mb-1">
+            <p className="text-lg">
+              <span className="font-bold">👩‍💻 LiuXing</span> - Curious &
+              Motivated 🔍
+            </p>
+            <p className="text-lg">
+              <ul className="list-disc">
+                <li>
+                  ✨ Passionate about exploring{" "}
+                  <span className="font-bold text-purple-400">
+                    tech & creativity
+                  </span>
+                </li>
+                <li>
+                  💻 Expert in{" "}
+                  <span className="font-bold text-purple-400">
+                    3D visualization, user interfaces, & web apps
+                  </span>
+                </li>
+                <li>
+                  🛰️ Focused on{" "}
+                  <span className="font-bold text-purple-400">
+                    physics-based simulation
+                  </span>
+                </li>
+                <li>
+                  🎓 Aspiring{" "}
+                  <span className="font-bold text-purple-400">Ph.D.</span> in{" "}
+                  <span className="font-bold text-purple-400">
+                    computer graphics
+                  </span>
+                </li>
+                <li>
+                  🍀 Keen to collaborate with{" "}
+                  <span className="font-bold text-purple-400">
+                    like-minded individuals
+                  </span>
+                </li>
+                <li>
+                  💡 Seeking{" "}
+                  <span className="font-bold text-purple-400">
+                    insights & advice for application process, research topics,
+                    & opportunities
+                  </span>
+                </li>
+              </ul>
+            </p>
+
+            {/* <p className="mb-1">
               Hello, I'm LiuXing — an{" "}
               <span className="font-bold">{"ambitious"}</span>,
               <span className="font-bold">{" self-motivated"}</span>{" "}
@@ -61,11 +108,11 @@ const AboutSection = () => {
               application in this exciting field. I welcome any study advice or
               information about potential opportunities. Let's connect and
               embark on this intriguing journey together.
-            </p>
+            </p> */}
             <br />
             <a
               href="mailto:liuxing199604@outlook.com"
-              className="w-40 text-neutral-100 font-semibold md:px-6 px-2 py-3 bg-purple-500 rounded shadow hover:bg-purple-700 flex items-center gap-2"
+              className="w-1/3 text-neutral-100 font-semibold md:px-6 px-2 py-3 bg-purple-500 rounded shadow hover:bg-purple-700 flex items-center gap-2"
             >
               <HiOutlineMail />
               Contact Me

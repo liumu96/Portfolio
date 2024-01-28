@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Merriweather: ["Merriweather", "sans-serif"],
+        FiraMono: ["Fira Mono", "monospace", "sans-serif"],
       },
       screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
       animation: {

@@ -24,44 +24,40 @@ const HeroSection = () => {
             className="rounded-full shadow-2xl"
           />
         </div>
-        <div className="md:mt-2 md:w-3/5">
+        <div className="md:mt-2 md:w-3/5 text-justify">
           <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">
             Hi, I&#39;m LiuXing!
           </h1>
-          {/* I'm a Frontend Developer with a passion for 3D visualization and user interfaces. 
-         Currently fascinated by Computer Graphics, 
-         I specialize in Physics-based Animation and Simulation. 
-         Actively seeking a Ph.D. position to further explore the intersection of physics and technology. 
-         Let's connect and explore the future of interactive experiences together! */}
+          {/* Frontend Developer specialized in 3D visualization and user interfaces. 
+          Passionate about Computer Graphics, with a research focus on Physics-based Simulation & Visualization. 
+          Currently seeking a Ph.D. position to further contribute to this field through innovative research and applications. */}
           <p className="text-lg mt-4 mb-4 md:text-2xl">
-            I'm a{" "}
             <span className="font-semibold text-purple-500">
-              Frontend Developer
+              Frontend Developer{" "}
             </span>
-            , specializing in 3D visualization and user interfaces.
+            specialized in 3D visualization and user interfaces.
           </p>
           <p className="text-lg mt-4 mb-4 md:text-2xl">
-            Currently I'm an{" "}
+            Passionate about{" "}
             <span className="font-semibold text-purple-500">
-              independent learner
-            </span>{" "}
-            , deeply fascinated by
-            <span className="font-semibold text-purple-500">
-              {" "}
               Computer Graphics
             </span>
-            !
+            , with a research focus on{" "}
+            <span className="font-semibold text-purple-500">
+              Physics-based Simulation
+            </span>{" "}
+            &
+            <span className="font-semibold text-purple-500">
+              {" "}
+              3D Visualization
+            </span>
+            .
           </p>
           <p className="text-lg mt-4 mb-8 md:text-2xl">
-            My research interest is{" "}
-            <span className="font-semibold text-purple-500">
-              Physics-based Animation and Simulation
-            </span>{" "}
-            &{" "}
-            <span className="font-semibold text-purple-500">Visualization</span>
-            , and I'm actively seeking a{" "}
+            Currently seeking a{" "}
             <span className="font-semibold text-purple-500">Ph.D.</span>{" "}
-            position in this field.
+            position to further contribute to this field through innovative
+            research and applications.
           </p>
 
           <div className="flex md:gap-6 gap-3 flex-row md:justify-start justify-center items-center">

@@ -45,7 +45,7 @@ const experienceData = [
     location: "Shenzhen, China",
     position: "Frontend Developer",
     description:
-      "Developed SF Freight Logistics Hub's first inaugural 3D application, establishing a groundbreaking precedent in SF Tech. ",
+      "Pioneered the development of the first-ever 3D Application for the SF Freight logistics hub, setting a new benchmark in SF Tech's innovation portfolio.",
     icon: (
       <Image
         src="/experience/SFTech.png"
@@ -63,7 +63,7 @@ const experienceData = [
     location: "Shenzhen, China",
     position: "Frontend Developer",
     description:
-      "Responsible for leading the development of digital twin tools and applications for data centers. ",
+      "Led development of cutting-edge digital twin tools & webpages for data center management & efficiency ",
     icon: (
       <Image
         src="/experience/TX.png"
@@ -77,10 +77,10 @@ const experienceData = [
     age: 25,
   },
   {
-    title: "Independent Learner",
+    title: "Independent Learning Journey",
     location: "Xiamen, China",
     description:
-      "I'm preparing for a PHD application, immersing myself in compter graphics fundamental, programming languages(c++, c#), 3D tools(unity, blender).I'm trying to implement some interesting projects to demonstrate my passion for the field.",
+      "<li>Deepening knowledge & skills in computer graphics</li><li>Enhancing programming abilities (C++, C#)</li><li> Gaining proficiency in 3D tools (Unity, Blender) </li><li>Developing engaging projects showcasing passion & expertise ",
 
     // icon: React.createElement(IoIosSchool),
     icon: (
@@ -106,7 +106,7 @@ const ExperienceSection = () => {
         My Experience
         <hr className="w-6 h-1 mx-auto my-4 bg-purple-600 border-0 rounded"></hr>
       </h1>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="" className="font-Merriweather">
         {experienceData.map((item, idx) => {
           return (
             <React.Fragment key={idx}>
@@ -134,11 +134,15 @@ const ExperienceSection = () => {
                   {item.title}
                 </h3>
                 <p className="font-normal !mt-0 text-black">{item.location}</p>
-                <p className="!mt-1 !font-normal text-black">
+                {/* <p className="!mt-1 !font-normal text-black">
                   {item.description}
-                </p>
+                </p> */}
+                <p
+                  className="text-left !mt-1 text-black"
+                  dangerouslySetInnerHTML={{ __html: item.description }}
+                ></p>
                 {item.GPA && (
-                  <p className="!mt-1 !font-normal text-black">{item.GPA}</p>
+                  <p className="!mt-1 font-normal text-black">{item.GPA}</p>
                 )}
               </VerticalTimelineElement>
             </React.Fragment>
