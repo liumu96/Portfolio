@@ -39,51 +39,58 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p className="text-lg">
-              <span className="font-bold">👩‍💻 LiuXing</span> - Curious &
+              <span className="font-bold">👩🏻‍💻 LiuXing</span> - Curious &
               Motivated 🔍
             </p>
-            <p className="text-lg">
-              <ul className="list-disc">
-                <li>
-                  ✨ Passionate about exploring{" "}
-                  <span className="font-bold text-purple-400">
-                    tech & creativity
-                  </span>
-                </li>
-                <li>
-                  💻 Expert in{" "}
-                  <span className="font-bold text-purple-400">
-                    3D visualization, user interfaces, & web apps
-                  </span>
-                </li>
-                <li>
-                  🛰️ Focused on{" "}
-                  <span className="font-bold text-purple-400">
-                    physics-based simulation
-                  </span>
-                </li>
-                <li>
-                  🎓 Aspiring{" "}
-                  <span className="font-bold text-purple-400">Ph.D.</span> in{" "}
-                  <span className="font-bold text-purple-400">
-                    computer graphics
-                  </span>
-                </li>
-                <li>
-                  🍀 Keen to collaborate with{" "}
-                  <span className="font-bold text-purple-400">
-                    like-minded individuals
-                  </span>
-                </li>
-                <li>
-                  💡 Seeking{" "}
-                  <span className="font-bold text-purple-400">
-                    insights & advice for application process, research topics,
-                    & opportunities
-                  </span>
-                </li>
-              </ul>
-            </p>
+
+            <ul className="list-disc">
+              <li>
+                ✨ Passionate about exploring{" "}
+                <span className="font-bold text-purple-400">
+                  tech & creativity
+                </span>
+              </li>
+              <li>
+                ✨ Passionate about
+                <span className="font-bold text-purple-400">
+                  {" "}
+                  math
+                </span> and{" "}
+                <span className="font-bold text-purple-400">programming</span>
+              </li>
+              <li>
+                💻 Expert in{" "}
+                <span className="font-bold text-purple-400">
+                  3D visualization, user interfaces, & web apps
+                </span>
+              </li>
+              <li>
+                🛰️ Focused on{" "}
+                <span className="font-bold text-purple-400">
+                  physics-based simulation
+                </span>
+              </li>
+              <li>
+                🎓 Aspiring{" "}
+                <span className="font-bold text-purple-400">Ph.D.</span> in{" "}
+                <span className="font-bold text-purple-400">
+                  computer graphics
+                </span>
+              </li>
+              <li>
+                🍀 Keen to collaborate with{" "}
+                <span className="font-bold text-purple-400">
+                  like-minded individuals
+                </span>
+              </li>
+              <li>
+                💡 Seeking{" "}
+                <span className="font-bold text-purple-400">
+                  insights & advice for application process, research topics, &
+                  opportunities
+                </span>
+              </li>
+            </ul>
 
             {/* <p className="mb-1">
               Hello, I'm LiuXing — an{" "}

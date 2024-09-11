@@ -62,7 +62,7 @@ const HeroSection = () => {
 
           <div className="flex md:gap-6 gap-3 flex-row md:justify-start justify-center items-center">
             <a
-              href="/CV_liuxing.pdf"
+              href="/liuxing_CV_en.pdf"
               className="text-neutral-100 font-semibold md:px-6 px-2 py-3 bg-purple-500 rounded shadow hover:bg-purple-700 flex items-center gap-2"
             >
               Download CV
